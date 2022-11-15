@@ -197,6 +197,11 @@ img {
 	background-color: transparent;
 	cursor: none;
 
+
+	/* 🤔 */
+	min-width: 1rem;
+	min-height: 102px;
+
 }
 
 #translate.change-color {
