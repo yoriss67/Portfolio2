@@ -546,7 +546,7 @@ img {
 	border: solid 1px #000;
 	background-color: #000;
 
-	transform: translateX(-100%);
+	transform: translateX(100%);
 
 
 
