@@ -267,3 +267,355 @@ img {
 
 
 
+
+
+
+ /* 試し */
+ @keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        display: none;
+        opacity: 0;
+        z-index: -1;
+    }
+}
+
+#loader {
+    width: 100%;
+    height: 100vh;
+    /* background-color: #c5dada; */
+	background-color: #cc3333;
+
+    /* 環境によって「z-index」追加 */
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+/* 読み込み完了後に「loaded」を付与する */
+#loader.loaded {
+    animation: fadeOut 3s forwards;
+	/* display: none; */
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        display: none;
+        opacity: 0;
+        z-index: -1;
+    }
+}
+
+/* 以降「SpinKit」で選んだアニメーションのCSSを貼付する */
+
+
+
+/* https://1-notes.com/javascript-rotate-animation-with-animate/*/
+.rotate { 
+	width: 50vw;
+	height: auto;
+	margin: 0 auto;
+}
+
+.rotate img {
+	width: 50%;
+}
+
+
+/* https://into-the-program.com/javascript-loader/ */
+
+
+
+
+
+
+
+#loading {
+    width: 100%;
+    height: 100vh;
+    background-color: #c5dada;
+	background-color: #c2c2c2;
+	z-index: 999;
+
+    /* 環境によって「z-index」追加 */
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+/* 読み込み完了後に「loaded」を付与する */
+#loading.loaded {
+    animation: fadeOut 3s forwards;
+	/* display: none; */
+}
+/* 以降「SpinKit」で選んだアニメーションのCSSを貼付する */
+
+
+.loading-relative {
+	position: relative;
+}
+
+.sun-circle, .sun-border1, .sun-border2, .sun-border3, .sun-border4, .sun-border5, .horizon {
+	position: absolute;
+}
+
+.sun-circle {
+	width: 10vw;
+	height: 10vw;
+	border-radius: 50%;
+	border: 2px solid #000;
+
+	top: 48.5%;
+	left: 44%;
+
+	animation: dusk-to-dawn 5s linear infinite;
+	overflow: hidden;
+}
+
+@keyframes dusk-to-dawn {
+	0%, 100%{
+		transform: translateY(3vh);
+	  }
+	  
+	  50% {
+		transform: translateY(5vh);
+	  }
+}
+
+
+.horizon {
+	width: 18vw;
+	height: 18vh;
+	border-top:2px solid #000;
+	background-color: #c2c2c2;
+
+
+	top: 65%;
+	left: 40%;
+
+	z-index: 999;
+}
+
+
+
+
+
+
+.sun-border1 {
+	width: 0px;
+	height: 1px;
+	border: solid 1px #000;
+	background-color: #000;
+	transform: translateX(-100%);
+
+	
+	top: 60%;
+	left: 42%;
+	
+	animation: border_anim_horizon_left 5s linear infinite;
+}
+
+@keyframes border_anim_horizon_left {
+	0%, 100%{
+		width: 0%;
+		/* transform: translate(-4vw, -4vh) rotate(35deg); */
+
+	  }
+	  
+	  50% {
+		  width: 3%;
+
+		  /* transform: translate(-4vw, -4vh) rotate(35deg); */
+
+	  }
+
+}
+
+.sun-border2 {
+	width: 0px;
+	height: 1px;
+	border: solid 1px #000;
+	background-color: #000;
+
+	
+	top: 52%;
+	left: 43%;
+
+	transform: translateX(-100%) rotate(30deg);
+	animation: border_anim_diagonal_left 5s linear infinite;
+
+}
+
+@keyframes border_anim_diagonal_left {
+	0%, 100%{
+		width: 0%;
+	  }
+	  
+	  50% {
+		  width: 3%;
+		  transform: translate(-3vw, -2vw) rotate(vw);
+
+		  /* transform: translate(-4vw, -4vh) rotate(35deg); */
+	  }
+
+}
+
+.sun-border3 {
+	width: 0px;
+	height: 1px;
+	border: solid 1px #000;
+	background-color: #000;
+	transform: rotate(90deg);
+
+	
+	top: 49%;
+	left: 49%;
+
+	transform: rotate(90deg);
+
+	animation: border_anim_vertical 5s linear infinite;
+
+}
+
+@keyframes  border_anim_vertical {
+	0%, 100%{
+		width: 0%;
+		transform:translate(0vw, -2vh) rotate(90deg);
+
+	  }
+	  
+	  50% {
+		  width: 3%;
+	
+		  transform: translate(-1.5vw, -2vh) rotate(90deg);
+
+	  }
+	
+}
+
+.sun-border4 {
+	width: 0px;
+	height: 1px;
+	border: solid 1px #000;
+	background-color: #000;
+
+	
+	top: 52%;
+	right: 45%;
+
+
+	transform: translateX(100%) rotate(-210deg);
+	animation: border_anim_diagonal_right 5s linear infinite;
+
+}	
+
+
+
+
+@keyframes border_anim_diagonal_right {
+0%, 100%{
+	width: 0%;
+	/* transform: translate(-4vw, -4vh) rotate(35deg); */
+	/* transform: translate(0px, 0px) rotate(-3vw); */
+
+
+  }
+  
+  50% {
+	  width: 3%;
+	  transform: translate(3vw, 2vw)rotate(vw);
+
+
+
+	  /* transform: translate(-4vw, -4vh) rotate(35deg); */
+  }
+
+}
+
+.sun-border5 {
+	width: 0px;
+	height: 1px;
+	border: solid 1px #000;
+	background-color: #000;
+
+
+	
+	top: 60%;
+	right: 44%;
+	animation: border_anim_horizon_right 5s linear infinite;
+
+}
+
+
+@keyframes border_anim_horizon_right {
+	0%, 100%{
+		width: 0%;
+		/* transform: translate(-4vw, -4vh) rotate(35deg); */
+		transform: translateX(100%);
+
+	  }
+	  
+	  50% {
+		  width: 3%;
+		  transform: translateX(100%);
+
+		  /* transform: translate(-4vw, -4vh) rotate(35deg); */
+
+	  }
+
+}
+
+
+/* 🤔max320, 375,  425pxで太陽の位置下げる */
+
+
+
+
+@media all and (max-width: 426px) {
+	.sun-circle {
+		top: 55%;
+	}
+
+	.sun-border1, .sun-border5 {
+		top: 63%;
+	}
+
+	.sun-border2, .sun-border4 {
+		top: 59%;
+	}
+
+	.sun-border3 {
+		top: 58%;
+	}
+
+}
+
+@media all and (max-width: 376px) {
+	.sun-circle {
+		top: 55%;
+	}
+
+
+}
+
+
+@media all and (max-width: 321px) {
+	.sun-circle {
+		top: 57%;
+	}
+
+	.sun-border2, .sun-border4 {
+		top: 60.5%;
+	}
+
+	.sun-border3 {
+		top: 60.5%;
+	}
+
+
+
+}
+
