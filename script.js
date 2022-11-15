@@ -118,3 +118,57 @@ $('#translate').click(function() {
 // 	　　target.style.color = '#fff';
 	  
 // 	}, false);
+
+
+
+ function trueOrFalse( ) {
+	const text = document.getElementsByClassName('js-test');
+
+
+	// https://programming.sincoston.com/random-number/
+	 // ランダムな数字の生成（Math.random() * ( (最大値 + 1) - 最小値 ) + 最小値;）
+    // 2から5までのランダムな数字の生成
+    var randomNum = Math.floor(Math.random() * ((5 + 1) - 2)) + 2;
+
+    // 画面に表示
+    // $('#disp').text(randomNum);
+
+	if (randomNum >= 3) {
+		document.getElementById('disp').textContent = 'true'; 
+
+	} else {
+		document.getElementById('disp').textContent = 'flase'; 
+
+	}
+
+
+	// text.textContent(Math.random());
+
+	// console.log(Math.random());
+	
+}
+
+
+
+
+
+
+// https://into-the-program.com/javascript-loader/
+window.onload = ()=>{
+    const loader = document.getElementById('loading');
+    loader.classList.add('loaded');
+}
+
+// rotate()
+document.querySelector(`.rotate`).animate(
+	[
+		{ transform: 'rotate(0deg)' },
+		{ transform: 'rotate(360deg)' }
+	],
+	{
+		// 回転の速さ
+		duration: 5000,
+		easing: 'linear',
+		iterations: Infinity
+	}
+);
