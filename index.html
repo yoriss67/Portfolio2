@@ -37,6 +37,14 @@
   <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/3715e2b643.js" crossorigin="anonymous"></script>
 
+<!-- swiperは全てhtml内 -->
+<link
+rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+<style>
+  /* swiper */
+
+
+</style>
 
   <link rel="stylesheet" href="globals.css">
   <link rel="stylesheet" href="animation.css">
@@ -469,6 +477,154 @@
       </div>
 
     </div>
+
+
+<!-- ------------------------------------------------ -->
+
+
+<div class="works__flex ecommerce">
+  <!-- <div class="works__flex"> -->
+
+
+  <!-- 🎞️ -->
+  <div class="works__image ecommerce-image">
+
+      <!-- <div class="box edesktop-card ">
+        <img class="edesktop-card-image" src="./images/ecommrce-desktop.jpg" />
+      </div>
+
+
+
+      <div class="box readme-card ">
+        <img class="readme-card-image" src="./images/screencapture-readme.png" />
+      </div>
+
+
+      <div class="box etablet-card ">
+        <img class="etablet-card-image" src="./images/ecommerce-tablet.jpg" alt="tablet-card-image">
+      </div>
+
+      <div class="box emobile-card ">
+        <img class="emobile-card-image" src="./images/ecommerce-mobile.jpg" alt="mobile-card-image">
+      </div> -->
+
+
+
+
+
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="./images/screencapture-home.png" />
+        </div>
+        <div class="swiper-slide">
+          <img src="./images/screencapture-shop.png" />
+        </div>
+        <div class="swiper-slide">
+          <img src="./images/screencapture-readme.png" />
+        </div>
+        <div class="swiper-slide">
+          <img src="./images/screencapture-about.png" />
+        </div>
+        <div class="swiper-slide">
+          <img src="./images/screencapture-contact.png" />
+        </div>
+        <div class="swiper-slide">
+          <img src="./images/screencapture-sproduct.png" />
+        </div>
+        <div class="swiper-slide">
+          <img src="./images/screencapture-cart.png" />
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+
+
+
+
+
+
+
+  <div class="works__text ecommerce-text">
+    <div class="works__text__title">
+      <h3>E-commerce Website</h3>
+      <div class="eye-container">
+        <img src="images/eye.png" alt="">
+        <a class="eye-text toggleBox-en" href="https://yoriss67.github.io/Tech2-etc-Ecommerce-Website/" target="_blank">view site</a>
+        <a class="eye-text toggleBox-jp" href="https://yoriss67.github.io/Tech2-etc-Ecommerce-Website/"
+          target="_blank">サイトを見る</a>
+
+      </div>
+    </div>
+
+    <div class="works__text__sent">
+      <p class="left-align toggleBox-en">
+        This project is free open tutorial by Tech2 etc on YouTube. I enjoyed and learned how to structure code by guessing before watching his instructions. The most important takeaway from this project is to develop solid foundation in advance.
+      </p>
+      <p class="left-align toggleBox-jp">
+        このプロジェクトは、YouTubeにあるTech2 etcさんの無料オープンチュートリアルです。このプロジェクトは、Tech2などがYouTubeで公開している無料のチュートリアルで、Tech2 etcさんの説明を聞く前に、推測でコードを構成する方法を楽しみながら学ぶことができました。このプロジェクトで得た最も重要なことは、事前にしっかりとした基礎を身につけることです。
+        </p>
+    </div>
+
+    <div class="language-meter ecommerce-meter">
+      <div class="ecommerce-meter-html"></div>
+      <div class="ecommerce-meter-css"></div>
+      <div class="ecommerce-meter-js"></div>
+    </div>
+    <div class="language-meter-info">
+      <div class="html-circle"></div>
+      <p>HTML</p>
+      <div class="css-circle"></div>
+      <p>CSS</p>
+      <div class="js-circle"></div>
+      <p>JavaScript</p>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   </div>
 
 
@@ -577,9 +733,30 @@
   <!-- jQuery -->
 
   <script src="https://code.jquery.com/jquery-3.6.1.min.js"
-    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+  integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
   <script src="./Arctext/js/jquery.arctext.js"></script>
-
+  
+  
+  <!-- swiper -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      effect: "coverflow",
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: "auto",
+      coverflowEffect: {
+        rotate: 50,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows: true,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+      },
+    });
+  </script>
 
 
 
