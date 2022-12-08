@@ -127,7 +127,7 @@ img {
     height: auto;
 }
 
-.section-wrapper {
+.section-wrapper:not(:last-child) {
 	padding: 4vh 0;
 	margin-bottom: 10vh;
 
