@@ -1,0 +1,590 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* ------------------------------------------------------- */
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+:root {
+	font-size: 16px;
+    --basesunset: #E14D2A;
+    --pinksunset: #CD104D;
+    --baseblue: #0ED3BE;
+    --thickpurple: #9480F8;
+    --lightpurple: #E4D0FA;
+}
+
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Crimson Pro', serif; 
+	font-weight: 800; 
+}
+
+h2 {
+	font-size: min(6vw, 50px);
+}
+
+h3 {
+	font-size: min(5.5vw, 27px);
+
+}
+
+p {
+	font-family: 'Mada', sans-serif;
+
+}
+
+p,a,i {
+	font-size: min(4.5vw, 1.5rem);
+}
+
+a {
+	text-decoration: none;
+	cursor: none;
+}
+
+
+
+
+body {
+    font-family: 'Mada', sans-serif;
+    /* background-color: var(--lightpurple); */
+	height: 500vh;	
+	/*  cursor 画像の場合128×128px に制限 */
+	cursor: none; /*もともとあるカーソルは見えなくなるようにする*/
+
+	text-align: center;
+}
+
+
+body::-webkit-scrollbar {
+	width: .75rem;
+}
+
+body::-webkit-scrollbar-track {
+	background: #fff;
+}
+
+body::-webkit-scrollbar-thumb {
+	/* background: rgb(55,146,55);
+	background: linear-gradient(180deg, rgba(55,146,55,1) 0%, rgba(118,186,153,1) 11%, rgba(137,206,129,1) 19%, rgba(145,214,118,1) 26%, rgba(156,224,121,1) 33%, rgba(174,224,143,1) 39%, rgba(201,226,178,1) 51%, rgba(211,233,193,1) 62%, rgba(226,240,214,1) 68%, rgba(255,255,255,1) 80%, rgba(255,255,255,1) 93%); */
+	background: rgb(4,101,130);
+	background: linear-gradient(180deg, rgba(4,101,130,1) 0%, rgba(110,117,130,1) 20%, rgba(159,124,130,1) 38%, rgba(187,128,130,1) 51%, rgba(211,96,74,1) 66%, rgba(225,77,42,1) 78%, rgba(253,132,31,1) 93%, rgba(255,159,69,1) 112%);
+
+}
+img {
+    width: 80%;
+    height: auto;
+}
+
+.section-wrapper {
+	padding: 4vh 0;
+	margin-bottom: 10vh;
+
+}
+
+/*カーソル要素*/
+#cursor{
+	position: fixed;
+	/*丸の大きさと色の指定*/
+	background: rgb(236, 224, 224);
+	border-radius:20px;
+	width: 10px;
+	height: 10px;
+	/* 真ん中にくるようにマイナスマージンで調整 */
+	margin: -5px 0 0 -5px;
+	/* 一番手前に来るように */
+	z-index: 2;
+	/*クリックできなくなるのを防ぐため。noneで対応 */
+	pointer-events: none;
+	opacity: 0;
+  }
+
+  
+
+  /* #cursor img {
+	width: 10px;
+	height: 10px;
+  } */
+  /*ちょっと遅れてついてくるストーカー要素*/
+  #stalker{
+	position: fixed;
+	/*丸の大きさと色の指定*/
+	background: #fff;
+	width: 20px;
+	height: 20px;
+	border-radius:30px;
+	margin: -5px 0 0 -5px;
+	z-index: 9998;/*カーソルの後ろに来るように*/
+	pointer-events: none;/*クリックできなくなるのを防ぐため。noneで対応*/
+	opacity: 0.5;
+  }
+
+  .section-wrapper h2 {
+	margin: 4vh auto;
+  }
+
+  @media all and (min-width: 768px) {
+    .left-align {
+        text-align: left;
+    }
+}
+
+
+
+#translate {
+    position: fixed;
+    /* mobile */
+    top: 14rem;
+    right: 1.8rem;
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    z-index: 9999;
+
+    color: white;
+	border: none;
+	background-color: transparent;
+	cursor: none;
+
+}
+
+#translate.change-color {
+    color: rgb(79, 135, 157);
+}
+
+#translate p {
+	-ms-writing-mode: tb-rl;
+	writing-mode: vertical-rl;
+	text-orientation: upright;
+
+}
+
+@media all and (min-width: 990px) {
+    #translate {
+        top: 4rem;
+        right: 2rem;
+        -ms-writing-mode: lr-bt;
+        writing-mode: horizontal-tb;
+    }
+
+	#translate p {
+		/* display: inline-block; */
+		-ms-writing-mode: lr-bt;
+        writing-mode: horizontal-tb;
+
+	}
+
+}
+
+.display-none {
+	display: none;
+  }
+
+
+.toggleBox-jp {
+	font-family: 'Noto Serif JP', serif;
+	font-size: min(7vw, 1rem);
+}
+
+
+
+.fa-twitter:hover {
+    color: #1D9BF0;
+ }
+
+.fa-instagram:hover {
+    color: #E905AB;
+ }
+
+  .fa-linkedin-in:hover {
+    color: #004182;
+    color: #1472d1;
+
+ }
+
+  .fa-github:hover {
+    color: rgb(158, 154, 154);
+ }
+
+  .fa-note-sticky:hover {
+    color: #2CB696;
+ }
+
+
+
+
+
+
+
+
+
+
+ /* 試し */
+ @keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        display: none;
+        opacity: 0;
+        z-index: -1;
+    }
+}
+
+#loader {
+    width: 100%;
+    height: 100vh;
+    /* background-color: #c5dada; */
+	background-color: #cc3333;
+
+    /* 環境によって「z-index」追加 */
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+/* 読み込み完了後に「loaded」を付与する */
+#loader.loaded {
+    animation: fadeOut 3s forwards;
+	/* display: none; */
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        display: none;
+        opacity: 0;
+        z-index: -1;
+    }
+}
+
+/* 以降「SpinKit」で選んだアニメーションのCSSを貼付する */
+
+
+
+/* https://1-notes.com/javascript-rotate-animation-with-animate/*/
+.rotate { 
+	width: 50vw;
+	height: auto;
+	margin: 0 auto;
+}
+
+.rotate img {
+	width: 50%;
+}
+
+
+/* https://into-the-program.com/javascript-loader/ */
+
+
+
+
+
+
+
+#loading {
+    width: 100%;
+    height: 100vh;
+    background-color: #c5dada;
+	background-color: #c2c2c2;
+	z-index: 999;
+
+    /* 環境によって「z-index」追加 */
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+/* 読み込み完了後に「loaded」を付与する */
+#loading.loaded {
+    animation: fadeOut 3s forwards;
+	/* display: none; */
+}
+/* 以降「SpinKit」で選んだアニメーションのCSSを貼付する */
+
+
+.loading-relative {
+	position: relative;
+}
+
+.sun-circle, .sun-border1, .sun-border2, .sun-border3, .sun-border4, .sun-border5, .horizon {
+	position: absolute;
+}
+
+.sun-circle {
+	width: 10vw;
+	height: 10vw;
+	border-radius: 50%;
+	border: 2px solid #000;
+
+	top: 48.5%;
+	left: 44%;
+
+	animation: dusk-to-dawn 5s linear infinite;
+	overflow: hidden;
+}
+
+@keyframes dusk-to-dawn {
+	0%, 100%{
+		transform: translateY(3vh);
+	  }
+	  
+	  50% {
+		transform: translateY(5vh);
+	  }
+}
+
+
+.horizon {
+	width: 18vw;
+	height: 18vh;
+	border-top:2px solid #000;
+	background-color: #c2c2c2;
+
+
+	top: 65%;
+	left: 40%;
+
+	z-index: 999;
+}
+
+
+
+
+
+/*  */
+.sun-border1 {
+	width: 0px;
+	height: 1px;
+	border: solid 1px #000;
+	background-color: #000;
+	transform: translateX(-100%);
+
+	
+	top: 60%;
+	left: 42%;
+	
+	animation: border_anim_horizon_left 5s linear infinite;
+}
+
+@keyframes border_anim_horizon_left {
+	0%, 100%{
+		width: 0%;
+		/* transform: translate(-4vw, -4vh) rotate(35deg); */
+
+	  }
+	  
+	  50% {
+		  width: 10%;
+
+		  /* transform: translate(-4vw, -4vh) rotate(35deg); */
+
+	  }
+
+}
+
+.sun-border2 {
+	width: 0px;
+	height: 1px;
+	border: solid 1px #000;
+	background-color: #000;
+
+	
+	top: 53%;
+	left: 44%;
+
+	transform: translateX(-100%) rotate(30deg);
+	animation: border_anim_diagonal_left 5s linear infinite;
+
+}
+
+@keyframes border_anim_diagonal_left {
+	0%, 100%{
+		width: 0%;
+		/* transform: translate(-4vw, -4vh) rotate(35deg); */
+		transform: translate(0px, 0px) rotate(3vw);
+	  }
+	  
+	  50% {
+		  width: 5%;
+		  transform: translate(-3vw, -2vw) rotate(3vw);
+
+		  /* transform: translate(-4vw, -4vh) rotate(35deg); */
+	  }
+
+}
+
+.sun-border3 {
+	width: 0px;
+	height: 1px;
+	border: solid 1px #000;
+	background-color: #000;
+	transform: rotate(90deg);
+
+	
+	top: 50%;
+	left: 49%;
+
+	/* animation: border_anim_vertical 5s linear infinite; */
+
+}
+
+@keyframes  border_anim_vertical {
+	0%, 100%{
+		width: 0%;
+		/* transform: translate(-4vw, -4vh) rotate(35deg); */
+	
+	  }
+	  
+	  50% {
+		  width: 10%;
+	
+		  /* transform: translate(-4vw, -4vh) rotate(35deg); */
+	  }
+	
+}
+
+.sun-border4 {
+	width: 0px;
+	height: 1px;
+	border: solid 1px #000;
+	background-color: #000;
+
+	
+	top: 54%;
+	right: 45%;
+
+	transform: translateX(-100%) rotate(-30deg);
+	/* animation: border_anim_diagonal_right 5s linear infinite; */
+
+}	
+
+
+
+
+@keyframes border_anim_diagonal_right {
+0%, 100%{
+	width: 0%;
+	/* transform: translate(-4vw, -4vh) rotate(35deg); */
+	transform: translate(0px, 0px) rotate(-3vw);
+
+  }
+  
+  50% {
+	  width: 5%;
+	  transform: translate(3vw, 2vw) rotate(-3vw);
+
+	  /* transform: translate(-4vw, -4vh) rotate(35deg); */
+  }
+
+}
+
+.sun-border5 {
+	width: 0px;
+	height: 1px;
+	border: solid 1px #000;
+	background-color: #000;
+	/* transform: translateX(-100%); */
+
+
+	
+	top: 60%;
+	right: 42%;
+	animation: border_anim_horizon_right 5s linear infinite;
+
+}
+
+
+@keyframes border_anim_horizon_right {
+	0%, 100%{
+		width: 0%;
+		/* transform: translate(-4vw, -4vh) rotate(35deg); */
+
+	  }
+	  
+	  50% {
+		  width: 10%;
+
+		  /* transform: translate(-4vw, -4vh) rotate(35deg); */
+
+	  }
+
+}
+
+
+/* 🤔max320, 375,  425pxで太陽の位置下げる */
+
+
+
+
+@media all and (max-width: 426px) {
+	.sun-circle {
+		top: 55%;
+	}
+}
+
+/* @media all and (max-width: 376px) {
+	.sun-circle {
+		top: 55%;
+	}
+}
+ */
+
+@media all and (max-width: 321px) {
+	.sun-circle {
+		top: 57%;
+	}
+
+}
+

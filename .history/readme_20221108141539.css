@@ -1,0 +1,64 @@
+.readme {
+
+    margin: 0 auto;
+    text-align: center;
+    align-items: center;
+
+    position: relative;
+    width: 100%;
+
+}
+
+.coconut-tree-shadow img {
+    position: absolute;
+    top: -2px;
+    left: 0;
+    opacity: .5;
+    width: min(70%, 25rem);
+    filter: blur(1px);
+}
+
+.readme__flex {
+    margin: 10vh auto;
+}
+
+.container-fluid {}
+
+.readme__flex .row {
+    justify-content: center;
+    align-items: center;
+}
+
+@media all and (max-width:989px) {
+    .portfolio-text {
+        margin: 5vh auto 0;
+    }
+}
+
+
+
+.portfolio-image {}
+
+.portfolio-text {}
+
+#translate {
+    position: fixed;
+    /* mobile */
+    top: 14rem;
+    right: 1.8rem;
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    z-index: ;
+}
+
+
+@media all and (min-width: 990px) {
+    #translate {
+        top: 4rem;
+        right: 2rem;
+        -ms-writing-mode: lr-bt;
+        writing-mode: horizontal-tb;
+    }
+
+}

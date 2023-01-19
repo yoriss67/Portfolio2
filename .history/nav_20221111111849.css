@@ -1,0 +1,45 @@
+.navbar {
+    background-color: transparent;
+    margin-bottom: 10vh;
+    padding: 1rem;
+}
+
+.navbar h2, .navbar i {
+    color: #fff;
+}
+
+.navbar h2 {
+    font-size: min(4vw, 20px);
+}
+
+.navbar>.container-fluid {
+    align-items: flex-start;
+}
+
+.nav-link i {
+    /* 色変える */
+    z-index: 999;
+    color: white;
+}
+
+/* js */
+.nav-link i.change-color {
+    color: rgb(79, 135, 157);
+    z-index: 9999;
+}
+
+
+/* の枠線を消す
+.navbar-toggler {
+	border: 0 !important;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none !important;
+} */
+
+
+/* js */
+.navbar-brand h2.change-color {
+    color: #BB8082;
+  }

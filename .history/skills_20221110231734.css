@@ -1,0 +1,41 @@
+.skills {
+    background-color: var(--lightpurple);
+    background-color:rgba(226, 244, 211, 0.714);
+    background-blend-mode: color;
+    background-image: url(./images/surfboardrevision\ -\ コピー.jpg);
+    background-size: cover;
+    bgr
+
+
+}
+
+.skills__flex.container {
+
+}
+
+.skills__flex > .row {
+    display: flex;
+}
+
+.skills__flex__item  {
+    text-align: center;
+    padding: 2rem;
+}
+
+
+/* 個々 */
+.jquery img {
+    width: 40px;
+    height: auto;
+}
+
+.vscode img {
+    width: 40px;
+    height: auto;
+}
+
+.responsive img {
+    width: 70px;
+    height: auto;
+}
+

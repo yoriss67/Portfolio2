@@ -1,0 +1,19 @@
+footer {
+    background-color: var(--baseblue), #EAF7DF;
+    background-blend-mode: #EAF7DF, var(--baseblue);
+    font-family: cursive;
+}
+
+
+form {
+    display: inline-block;
+}
+
+place
+
+@media all and (min-width: 990px) {
+    
+    .form-flex {
+        display: flex;
+    }
+}

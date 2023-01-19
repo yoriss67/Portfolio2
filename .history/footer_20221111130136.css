@@ -1,0 +1,22 @@
+footer {
+    background-: var(--baseblue),#EAF7DF;
+    background-blend-mode: multiply;
+    font-family: cursive;
+}
+
+
+form {
+    display: inline-block;
+}
+
+input, textarea {
+	font-family: 'Mada', sans-serif;
+    border: none;
+}
+
+@media all and (min-width: 990px) {
+    
+    .form-flex {
+        display: flex;
+    }
+}

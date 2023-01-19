@@ -1,0 +1,67 @@
+footer {
+    background: var(--baseblue);
+    /* background-blend-mode: multiply; */
+    position: relative;
+    background-color: #98dfaf;
+    
+}
+
+.contact-message p {
+
+}
+
+/* footer::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: .6;
+    content: "";
+    display: block;
+    width: 100%;
+    min-height: 10vh;
+    background:#EAF7DF;
+}
+ */
+
+form {
+    display: inline-block;
+    width: 80vw;
+}
+
+input, textarea {
+	font-family: 'Mada', sans-serif;
+    border: none;
+    background-color: rgba(234,247,223, .6);
+    min-height: 7vh;
+    margin: 2vw;
+    outline: none;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+
+#name {
+    width: 40vw;
+}
+
+#email {
+    width: 40vw;
+}
+
+textarea {
+    width: 60vw;
+    min-height: 15vh;
+}
+
+input[type="submit"] {
+    background-color: white;
+    width: 30vw;
+}
+
+@media all and (min-width: 990px) {
+    
+    .form-flex {
+        display: flex;
+        justify-content: center;
+    }
+}

@@ -1,0 +1,5 @@
+footer {
+    background-color: var(--baseblue), #EAF7DF;
+    background-blend-mode: #EAF7DF, var(--baseblue);
+    font-family: cursive;
+}
