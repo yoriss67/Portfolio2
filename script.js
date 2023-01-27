@@ -159,19 +159,19 @@ window.onload = ()=>{
     loader.classList.add('loaded');
 }
 
-// rotate()
-document.querySelector(`.rotate`).animate(
-	[
-		{ transform: 'rotate(0deg)' },
-		{ transform: 'rotate(360deg)' }
-	],
-	{
-		// 回転の速さ
-		duration: 5000,
-		easing: 'linear',
-		iterations: Infinity
-	}
-);
+// // rotate()
+// document.querySelector('.rotate').animate(
+// 	[
+// 		{ transform: 'rotate(0deg)' },
+// 		{ transform: 'rotate(360deg)' }
+// 	],
+// 	{
+// 		// 回転の速さ
+// 		duration: 5000,
+// 		easing: 'linear',
+// 		iterations: Infinity
+// 	}
+// );
 
 
 
