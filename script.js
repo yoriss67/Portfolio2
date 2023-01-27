@@ -93,6 +93,15 @@ $(function(){
 // 初期に見えなくする
 $('.toggleBox-jp').addClass('display-none');
 
+let nameLabel = document.getElementById('nameLabel');
+const nameClasses = nameLabel.classList;
+
+let emailLabel = document.getElementById('emailLabel');
+const emailClasses = emailLabel.classList;
+
+
+
+
 $('#translate').click(function() {
     // $('.toggleBox').toggleClass('display-none');
     // if($('.english')) {
@@ -101,7 +110,52 @@ $('#translate').click(function() {
             $('.toggleBox-en').toggleClass('display-none');
             $('.toggleBox-jp').toggleClass('display-none');
     // }
+
+
+	// if(nameLabel.innerHTML = '氏名') {
+	// 	nameLabel.innerHTML = 'name'
+	// } else if (nameLabel.innerHTML = 'name') {
+	// 	nameLabel.innerHTML = '氏名'
+	// }
+
+
+	const nameResult = nameClasses.toggle("name");
+	nameLabel.textContent = `${nameResult ? "氏名" : "name"}`;
+
+
+	const emailResult = emailClasses.toggle("email");
+	emailLabel.textContent = `${emailResult ? "メール" : "email"}`;
+
 });
+
+
+
+
+// 2023/01/27
+
+// formsubmitが使えるようにするためen / jp クリックでplaceholder="Enter your email”を変える
+
+// const nameId = document.getElementById('name')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // a hover時
@@ -118,6 +172,17 @@ $('#translate').click(function() {
 // 	　　target.style.color = '#fff';
 	  
 // 	}, false);
+
+
+
+
+
+
+
+
+
+
+
 
 
 
