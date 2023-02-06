@@ -3,7 +3,7 @@
 // arctext
 $(function() {
 	$('.eye-text').arctext({
-			radius: 80,
+			radius: 100,
 			dir: -1
 		});
 	});
@@ -74,19 +74,61 @@ $(window).on('scroll', function() {
 
 
   //   浮かび上がってくる
-$(function(){
-	$(window).scroll(function (){
-        // fadeinは複数あるから　.each
-		$('.fadein').each(function(){
-			var elemPos = $(this).offset().top;
-			var scroll = $(window).scrollTop();
-			var windowHeight = $(window).height();
-			if (scroll > elemPos - windowHeight + 100){
-				$(this).addClass('scrollin');
-			}
-		});
-	});
+// $(function(){
+// 	$(window).scroll(function (){
+//         // fadeinは複数あるから　.each
+// 		$('.fadein').each(function(){
+// 			var elemPos = $(this).offset().top;
+// 			var scroll = $(window).scrollTop();
+// 			var windowHeight = $(window).height();
+// 			if (scroll > elemPos - windowHeight + 100){
+// 				$(this).addClass('scrollin');
+// 			}
+// 		});
+// 	});
+// });
+
+// 🌸reloadされた瞬間に起きる
+// document.addEventListener('DOMContentLoaded', function() {
+// 	window.addEventListener('scroll', function() {
+// 	  const fadeinElements = document.querySelectorAll('.fadein');
+// 	  fadeinElements.forEach(function(elem) {
+// 		// const elemPos = elem.getBoundingClientRect().top;
+// 		const elemPos = elem.offsetTop;
+// 		const scroll = window.pageYOffset;
+// 		const windowHeight = window.innerHeight;
+// 		// 🌸The first code snippet may not work because it uses the offsetTop property to calculate the distance of the element relative to the top of the offset parent (usually the body element)
+// 		// 📄heightの絶対値を書かないといけない
+// 		if (scroll > elemPos - windowHeight + 2900) {
+// 		  elem.classList.add('scrollin');
+// 		}
+// 	  });
+// 	});
+//   });
+
+// https://flex-box.net/js-scrollin/
+// こっちの方がversatile
+let fadeInTarget = document.querySelectorAll('.fadein');
+window.addEventListener('scroll', () => {
+  for (let i = 0; i < fadeInTarget.length; i++){
+    const rect = fadeInTarget[i].getBoundingClientRect().top;
+    const scroll = window.pageYOffset || document.documentElement.scrollTop;
+    const offset = rect + scroll;
+    const windowHeight = window.innerHeight; // 現在のブラウザの高さ
+    if (scroll > offset - windowHeight + 200) {
+      fadeInTarget[i].classList.add('scrollin');
+    }
+
+	const bounce = document.querySelector('.scrimba-top-text h3')
+	setTimeout(function(){
+		bounce.classList.add('bounce')
+	},2000);
+  }
 });
+
+
+
+
 
 // 言語切り替え
 
