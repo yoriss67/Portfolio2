@@ -115,16 +115,60 @@ window.addEventListener('scroll', () => {
     const scroll = window.pageYOffset || document.documentElement.scrollTop;
     const offset = rect + scroll;
     const windowHeight = window.innerHeight; // 現在のブラウザの高さ
+	const bounce = document.querySelector('.scrimba')
+	// setTimeout(function(){
+	// 	bounce.classList.add('bounce')
+	// },200);
     if (scroll > offset - windowHeight + 200) {
       fadeInTarget[i].classList.add('scrollin');
     }
 
-	const bounce = document.querySelector('.scrimba-top-text h3')
-	setTimeout(function(){
-		bounce.classList.add('bounce')
-	},2000);
   }
 });
+
+// ReTribe16 shrink
+
+let shrinkTarget = document.querySelectorAll('.shrink');
+window.addEventListener('scroll', () => {
+	for (let i = 0; i < shrinkTarget.length; i++){
+	  const rect = shrinkTarget[i].getBoundingClientRect().top;
+	  const scroll = window.pageYOffset || document.documentElement.scrollTop;
+	  const offset = rect + scroll;
+	  const windowHeight = window.innerHeight; // 現在のブラウザの高さ
+	  if (scroll > offset - windowHeight + 100) {
+		shrinkTarget[i].classList.add('shrink-animation');
+	  }
+	}
+  });
+
+
+  
+let fromBottomTarget = document.querySelectorAll('.from-bottom');
+window.addEventListener('scroll', () => {
+	for (let i = 0; i < fromBottomTarget.length; i++){
+	  const rect = fromBottomTarget[i].getBoundingClientRect().top;
+	  const scroll = window.pageYOffset || document.documentElement.scrollTop;
+	  const offset = rect + scroll;
+	  const windowHeight = window.innerHeight; // 現在のブラウザの高さ
+	  if (scroll > offset - windowHeight + 100) {
+		fromBottomTarget[i].classList.add('from-bottom-animation');
+	  }
+	}
+  });
+
+
+  let scrimbaTarget = document.querySelectorAll('.scrimba');
+window.addEventListener('scroll', () => {
+	for (let i = 0; i < scrimbaTarget.length; i++){
+	  const rect = scrimbaTarget[i].getBoundingClientRect().top;
+	  const scroll = window.pageYOffset || document.documentElement.scrollTop;
+	  const offset = rect + scroll;
+	  const windowHeight = window.innerHeight; // 現在のブラウザの高さ
+	  if (scroll > offset - windowHeight + 100) {
+		scrimbaTarget[i].classList.add('bounce');
+	  }
+	}
+  });
 
 
 

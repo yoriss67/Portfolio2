@@ -1,48 +1,67 @@
-.currently {
+.currently {}
 
-}
-
-.currently p {
+/* .currently p {
     font-size: min(3.5vw, 1.2rem);
-}
+} */
 
-.currently.section-wrapper h2 {
+.learning {}
 
-}
-
-.scrimba-wrapper {
-
-}
+.scrimba-wrapper {}
 
 .scrimba-top-text {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     text-align: left;
     line-height: 5.5vh;
 
 }
 
-.scrimba-top-text h3 {
 
+
+.scrimba {
+    font-size: clamp(2rem, 4vw, 7rem);
+    padding-bottom: 6vh;
+
+
+        opacity: 0;
+        transform: translate(0, 50px);
+        transition: all 550ms;
+        border-radius: 0px;
+        color: #565a62;
+    
+    
 }
 
-.bounce {
-    animation: bounce 2s ease ;
-  }
-  @keyframes bounce {
-      0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
-      40% {transform: translateY(-30px) scale(1.1);}
-      60% {transform: translateY(-15px) scale(1.2);}
-  }
-
-.scrimba-top-text h5 {
-
+.scrimba.bounce {
+    animation: bounce 2s ease;
 }
 
-.scrimba-top-text p {
+@keyframes bounce {
 
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-30px) scale(1.1);
+    }
+
+    60% {
+        transform: translateY(-15px) scale(1.2);
+    }
 }
+
+.scrimba-top-text h4 {
+    font-size: clamp(1rem, 3vw, 5rem);
+    margin: 2vh auto;
+}
+
+.scrimba-top-text p {}
 
 .scrimba-card-wrapper {
     display: flex;
@@ -55,11 +74,11 @@
 }
 
 .scrimba-card {
-display: flex;
-flex-direction: column;
-width: 25%;
+    display: flex;
+    flex-direction: column;
+    width: 25%;
 
-overflow: hidden;
+    overflow: hidden;
 
 
 
@@ -80,12 +99,10 @@ overflow: hidden;
 }
 
 .scrimba-card-img:hover {
-        transform: scale(1.2);
+    transform: scale(1.2);
 }
 
-.scrimba-card-desc {
-
-}
+.scrimba-card-desc {}
 
 .scrimba-card-desc-title {
     display: flex;
@@ -128,7 +145,7 @@ overflow: hidden;
 .currently .eye-container a {
     /* これがあるとtranslateできない */
     /* display: block; */
-    font-size: min(1.5vw, 20px);
+    font-size: min(4vw, 15px);
 }
 
 .currently .eye-container a.toggleBox-jp {
@@ -146,7 +163,7 @@ overflow: hidden;
     .scrimba-card {
         width: 80%;
         margin: 0 auto;
-    
+
     }
 
     .scrimba-card-desc-title {
@@ -155,11 +172,11 @@ overflow: hidden;
 
     .scrimba-card-desc-text {
         text-align: center;
-       
+
     }
 
     .currently .eye-container {
         margin-right: 1rem;
     }
-    
+
 }

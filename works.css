@@ -74,7 +74,7 @@
 .language-meter-info {
     display: flex;
     width: 85%;
-    margin: 0 auto;
+    margin: 2vh auto;
     align-items: center;
 }
 
@@ -827,17 +827,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 .edesktop-card-image::after {
     content: "";
     top: 0;
@@ -972,6 +961,137 @@
     background-color: #F1E05A;
     border-radius: 0 10px 10px 0
 }
+
+
+
+/* ⭐ReTribe*/
+
+.retribe16 {
+}
+
+.retribe16-image {
+    position: relative;
+    overflow: hidden;
+    width: 60%;
+    /* width: 100vw; */
+}
+
+
+.retribe16-img {
+    object-fit: cover;
+    width: 100%;
+    height: 70vh;
+    object-position: center top;
+
+}
+
+.retribe16-img-part {
+    box-shadow: 0 0 3px 0 rgba(0,0,0,.12), 0 2px 3px 0 rgba(0,0,0,.22);
+    transition: .3s;
+}
+
+.from-bottom {
+    /* opacity: 0; */
+    position: absolute;
+    width: 40%;
+    /* top: 30%;
+    left: 30%;
+    transform: translateY(-50%);
+    transform: translate(0, 50px);
+ */
+ left: 10%;
+ transform: translate(0, 70%);
+ opacity: .5;
+
+
+
+
+}
+
+.retribe16-img-part:hover {
+    box-shadow: 0 15px 30px -5px rgba(0,0,0,.15), 0 0 5px rgba(0,0,0,.1);
+    /* transform: scale(1, 1); */
+    opacity: .9;
+}
+
+.from-bottom.from-bottom-animation {
+    animation: from-bottom 2s ease-in;
+}
+
+@keyframes from-bottom {
+    0% {
+        opacity: 0;
+        transform: translate(0, 150%);
+    
+    }
+
+    50% {
+    
+    }
+
+    100% {
+        opacity: .5;
+        transform: translate(0, 70%);
+
+    }
+}
+
+
+
+.shrink {
+    /* transform: scale(1.2); */
+}
+
+.shrink.shrink-animation {
+    animation: shrink 1s ease-in;
+}
+
+@keyframes shrink {
+    0% {
+        transform: scale(1.5);
+    }
+
+    100% {
+        transform: scale(1);
+
+    }
+}
+
+.retribe16-text {
+    width: 30%;
+}
+
+.retribe16-meter {
+}
+
+
+
+
+.retribe16-meter-html, .retribe16-meter-css, .retribe16-meter-js {
+    height: inherit;
+
+}
+
+
+.retribe16-meter-html {
+    width: 32.7%;
+    background-color: #E34C26;
+    border-radius: 10px 0 0 10px
+}
+
+.retribe16-meter-css {
+    width: 61.7%;
+    background-color: #563D7C;
+
+}
+
+.retribe16-meter-js {
+    width: 5.6%;
+    background-color: #F1E05A;
+    border-radius: 0 10px 10px 0
+}
+
+
 
 
 
