@@ -26,9 +26,10 @@
     color: #fff;
     display: flex;
     margin: 0 auto;
-    justify-content: center;
-    align-items: stretch;
-    border: 2px solid #fff;
+    /* justify-content: center;
+    align-items: stretch; */
+
+    /* border: 2px solid #fff; */
     height: 80%;
 }
   
@@ -44,10 +45,12 @@
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    padding: 2% 0 10%;
+    /* padding: 2% 0 10%; */
+    margin: 0 auto;
 }
   
   .hero__box-greeting {
+    line-height: 3rem;
   }
   
   /* Hello */
@@ -67,15 +70,43 @@
   }
   
   /* 共通 */
-  .hero__box-title {
-  }
-  
+
+.hero__box-title {
+  margin: 0 2vw;
+  border: 1px solid #fff;
+  border-radius: 30px;
+  padding: 3vh 5vw;
+  display: flex;
+  align-items: center;
+  font-family: 'Crimson Pro', serif;
+}
+
   .hero__box-title1 {
+    color: #fff;
+    background-color: #b7c696;
   }
   
   .hero__box-title2 {
+    background-color: var(--green);
   }
   
   .hero__box-title3 {
+    background-color: #EC6256;
   }
   
+
+  @media all and (max-width: 768px) {
+    .hero__box-txt {
+        width: 100%;
+    }
+
+    .hero__box-titles {
+        display: flex;
+        flex-direction: column;
+        transform: translateY(10vh);
+    }
+
+    .hero__box-title {
+        margin: 1vh auto;
+    }
+  }

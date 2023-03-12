@@ -95,7 +95,7 @@
 }
 
 .scrimba-card-img:hover {
-  transform: scale(1.2);
+  /* transform: scale(1.2); */
 }
 
 .scrimba-card-desc {

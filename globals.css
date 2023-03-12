@@ -144,6 +144,7 @@ table {
   --thickpurple: #9480f8;
   --lightpurple: #e4d0fa;
   --sky-blue: #b6d4f1;
+  --green:#42797F;
 }
 
 h1,
@@ -337,7 +338,8 @@ img {
 
 #translate.change-color {
   color: rgb(79, 135, 157);
-  color: rgb(90, 152, 122);
+  color: var(--green);
+
 }
 
 #translate p {
