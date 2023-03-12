@@ -38,6 +38,7 @@
 .nav-link i.change-color {
     color: rgb(79, 135, 157);
     color: #004182;
+    color: rgba(118, 186, 153, 1);
 
 }
 
@@ -56,6 +57,7 @@
 .navbar-brand h2.change-color {
     color: rgb(79, 135, 157);
     color: #004182;
+    color: rgb(90, 152, 122);
 
   }
 

@@ -1,0 +1,81 @@
+/* hero */
+.hero {
+    position: relative;
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+  
+  .hero__bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.7;
+    object-fit: cover;
+    z-index: -1;
+  }
+  
+  .hero__box {
+    width: 70%;
+    font-weight: bold;
+    /* transform: translate(-50%, -50%); */
+    color: #fff;
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: stretch;
+    border: 2px solid #fff;
+    height: 80%;
+}
+  
+  .hero__box-img {
+    border-radius: 10px;
+    object-fit: contain;
+    width: 25%;
+    transform: translate(-20%, -20%);
+  }
+  
+  .hero__box-txt {
+    /* width: 80%; */
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 2% 0 10%;
+}
+  
+  .hero__box-greeting {
+  }
+  
+  /* Hello */
+  .hero__box-greeting p:nth-child(1) {
+    /* color: #0ed3be; */
+  }
+  
+  /* I'm Iori */
+  .hero__box-greeting h2 {
+    /* color: #5d6564; */
+    
+  }
+  
+  .hero__box-titles {
+    display: flex;
+
+  }
+  
+  /* 共通 */
+  .hero__box-title {
+  }
+  
+  .hero__box-title1 {
+  }
+  
+  .hero__box-title2 {
+  }
+  
+  .hero__box-title3 {
+  }
+  
