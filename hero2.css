@@ -81,17 +81,21 @@
   font-family: 'Crimson Pro', serif;
 }
 
-  .hero__box-title1 {
-    color: #fff;
-    background-color: #b7c696;
-  }
-  
+.hero__box-title1 {
+  color: #fff;
+  background-color: #b7c696;
+  transform: translate(-20%, -100%);
+}
+
+
   .hero__box-title2 {
     background-color: var(--green);
+    transform: translate(20%, -100%);
   }
   
   .hero__box-title3 {
     background-color: #EC6256;
+
   }
   
 
@@ -103,10 +107,24 @@
     .hero__box-titles {
         display: flex;
         flex-direction: column;
-        transform: translateY(10vh);
+        transform: translateY(7vh);
     }
 
     .hero__box-title {
         margin: 1vh auto;
+        padding: 2vh 6vw;
+    }
+
+
+    .hero__box-title1 {
+      transform: translate(0%, -25%);
+    }
+
+    .hero__box-title2 {
+      transform: translate(0%, -20%);
+    }
+
+    .hero__box-title3 {
+      transform: translate(0%, -22%);
     }
   }

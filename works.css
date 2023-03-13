@@ -37,7 +37,7 @@
 .works__image {
   position: relative;
   background-size: cover;
-  border: 2px solid #000;
+  border: 1px solid #000;
 }
 
 .works__flex__image img {
@@ -489,7 +489,6 @@
 .easybank-image {
   position: relative;
   width: 60%;
-  border: 2px solid #000;
 }
 
 .easybank-image img {
@@ -616,7 +615,6 @@
 .ecommerce-image {
   width: 60%;
   /* background-color:rgba(90, 152, 122, .7); */
-  border: 2px solid #565a62;
   margin: 0 auto;
   position: relative;
 
