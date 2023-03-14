@@ -132,10 +132,11 @@
     }
 
     .hero__box-title {
-      margin: 1vh auto;
-      padding: 2vh 6vw;
-      width: 62%
-    }
+      margin: 0vh auto;
+      padding: 2vh 0vw;
+      width: 62%;
+      font-size: min(1.8rem, 40px);
+  }
 
     .hero__box-title1 {
       transform: translate(0%, -25%);
