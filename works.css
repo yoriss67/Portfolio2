@@ -15,6 +15,7 @@
   /* これがあるとtranslateできない */
   /* display: block; */
   font-size: min(3vw, 20px);
+  color: var(--green);
 }
 
 .eye-container a.toggleBox-jp {
@@ -38,6 +39,7 @@
   position: relative;
   background-size: cover;
   border: 1px solid #000;
+  border-radius: 10px;
 }
 
 .works__flex__image img {
@@ -92,6 +94,16 @@
   padding-right: 2rem;
 }
 
+
+.meter-html {
+  background-color: #E56559;
+}
+
+.meter-css {
+  background-color: var(--green);
+
+}
+
 .html-circle,
 .css-circle,
 .js-circle {
@@ -106,7 +118,7 @@
 }
 
 .css-circle {
-  background-color: #563d7c;
+  background-color:  var(--green);
 }
 
 .js-circle {
@@ -162,13 +174,11 @@
 
 .travel-meter-html {
   width: 71.5%;
-  background-color: #e34c26;
   border-radius: 10px 0 0 10px;
 }
 
 .travel-meter-css {
   width: 28.5%;
-  background-color: #563d7c;
   border-radius: 0 10px 10px 0;
 }
 
@@ -559,13 +569,11 @@
 
 .easybank-meter-html {
   width: 41.6%;
-  background-color: #e34c26;
   border-radius: 10px 0 0 10px;
 }
 
 .easybank-meter-css {
   width: 50.1%;
-  background-color: #563d7c;
 }
 
 .easybank-meter-js {
@@ -835,13 +843,11 @@
 
 .ecommerce-meter-html {
   width: 71.3%;
-  background-color: #e34c26;
   border-radius: 10px 0 0 10px;
 }
 
 .ecommerce-meter-css {
   width: 26%;
-  background-color: #563d7c;
 }
 
 .ecommerce-meter-js {
@@ -947,13 +953,11 @@
 
 .retribe16-meter-html {
   width: 32.7%;
-  background-color: #e34c26;
   border-radius: 10px 0 0 10px;
 }
 
 .retribe16-meter-css {
   width: 61.7%;
-  background-color: #563d7c;
 }
 
 .retribe16-meter-js {

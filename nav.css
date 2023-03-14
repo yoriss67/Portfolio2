@@ -2,7 +2,7 @@
 .navbar {
     background-color: transparent;
     margin-bottom: 10vh;
-    padding: 1rem;
+    padding: 2% 5%;
 }
 
 .navbar h2 {
@@ -10,7 +10,7 @@
 }
 
 .navbar h2 {
-    font-size: min(4vw, 20px);
+    font-size: min(5vw, 2rem);
 }
 
 .navbar>.container-fluid {
@@ -61,7 +61,25 @@
     color: #004182;
     color: rgb(90, 152, 122);
     color: var(--green);
-
-
   }
 
+
+
+  #navbarText {
+    /* font-size: 3rem; */
+  }
+
+  .nav-item {
+    margin: 0 0 0 2%;
+}
+
+  .nav-item i {
+    font-size: 2rem;
+  }
+
+
+  @media all and (max-width:990px) {
+    .nav-item i {
+        font-size: 1.5rem;
+      }
+  }
