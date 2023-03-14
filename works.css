@@ -544,7 +544,7 @@
 
   .easybank-image img:nth-child(3) {
     width: 30%;
-    top: 64%;
+    top: 60%;
   }
   
 }
@@ -807,14 +807,14 @@
 }
 
 .swiper-pagination-bullet {
-  background: rgba(90, 216, 208, 0.8);
+  background:#E3E6F3;
   opacity: 1;
 }
 
 .swiper-pagination-bullet-active {
   opacity: var(--swiper-pagination-bullet-opacity, 1);
   background: var(--swiper-pagination-color, var(--swiper-theme-color));
-  background-color: rgb(18, 88, 84);
+  background-color:#9396a1;
 }
 
 @media all and (max-width: 426px) {

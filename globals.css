@@ -652,15 +652,13 @@ img {
   0%,
   100% {
     width: 0%;
-    /* transform: translate(-4vw, -4vh) rotate(35deg); */
-    transform: translateX(100%);
+    /* transform: translateX(100%); */
   }
 
   50% {
     width: 3%;
-    transform: translateX(100%);
+    /* transform: translateX(100%); */
 
-    /* transform: translate(-4vw, -4vh) rotate(35deg); */
   }
 }
 
