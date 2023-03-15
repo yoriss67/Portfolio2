@@ -1,0 +1,89 @@
+
+.navbar {
+    background-color: transparent;
+    margin-bottom: 10vh;
+    padding: 1% 4%;
+}
+
+.navbar h2 {
+    color: #CB7A67;
+}
+
+.navbar h2 {
+    font-size: min(5vw, 2rem);
+}
+
+.navbar>.container-fluid {
+    align-items: flex-start;
+}
+
+/* .nav-link i {
+    色変える
+    z-index: 999;
+    color: white;
+} */
+
+
+
+
+.nav-link  {
+    color: #CB7A67;
+    z-index: 9999;
+    position: relative;
+
+}
+
+
+/* js */
+.nav-link i.change-color {
+    color: rgb(79, 135, 157);
+    color: #004182;
+    color: rgba(118, 186, 153, 1);
+    color: var(--green);
+    color: #5E9A99;
+
+
+
+}
+
+
+/* の枠線を消す
+.navbar-toggler {
+	border: 0 !important;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none !important;
+} */
+
+
+/* js */
+.navbar-brand h2.change-color {
+    color: rgb(79, 135, 157);
+    color: #004182;
+    color: rgb(90, 152, 122);
+    color: var(--green);
+    color: #5E9A99;
+
+  }
+
+
+
+  #navbarText {
+    /* font-size: 3rem; */
+  }
+
+  .nav-item {
+    margin: 0 0 0 2%;
+}
+
+  .nav-item i {
+    font-size: 2rem;
+  }
+
+
+  @media all and (max-width:990px) {
+    .nav-item i {
+        font-size: 1.5rem;
+      }
+  }
