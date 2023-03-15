@@ -1,0 +1,147 @@
+footer {
+    background: var(--baseblue);
+    /* background-blend-mode: multiply; */
+    position: relative;
+    background-color: #98dfaf;
+    background-color: #AABDB5;
+    background-color: #b8e2d2;
+    background-color: #8FC4D1;
+
+
+    padding: 4vh 0;
+    
+}
+
+.contact-message {
+    margin-bottom: 3vh;
+}
+
+.contact-message p {
+    padding: .7rem;
+}
+
+/* footer::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: .6;
+    content: "";
+    display: block;
+    width: 100%;
+    min-height: 10vh;
+    background:#EAF7DF;
+}
+ */
+
+ .contact-social-href i {
+    color: #212529;
+ }
+
+
+
+
+ 
+
+ .contact-social-href:hover {
+    cursor: none;
+ }
+
+ .contact-social a:not(:last-child) {
+    padding-right: 5vw;
+}
+
+
+
+
+/* ------------------------------------------- */
+
+
+
+
+
+form {
+    display: inline-block;
+    width: 80vw;
+}
+
+.form-flex {
+    display: flex;
+    flex-direction: column;
+}
+
+.field {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 3vh 0;
+
+}
+
+
+
+input, textarea {
+	font-family: 'Mada', sans-serif;
+    border: none;
+    background-color: transparent;
+    margin: 1vw 2vw;
+    outline: none;
+    padding: 2vw;
+    border-radius: 5px;
+    color: #212529;
+    border: #212529 2px solid;
+}
+
+input:focus, textarea:focus {
+    outline: 1px white solid;
+
+}
+
+
+.name {
+    min-width: 15vw;
+}
+
+
+#email {
+    min-width: 15vw;
+}
+
+textarea {
+    width: 60vw;
+    min-height: 18vh;
+}
+
+input[type="submit"] {
+    background-color: white;
+    width: 30vw;
+    color: #212529;
+    font-weight: bold;
+}
+
+
+
+
+
+
+@media all and (min-width: 990px) {
+    
+    .form-flex {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .field {
+        flex-direction: row;
+    
+    }
+
+
+    input {
+        padding: 1vw;
+    }
+
+
+}
+
+
