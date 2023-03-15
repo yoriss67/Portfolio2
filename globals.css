@@ -188,6 +188,7 @@ body {
   cursor: none; /*もともとあるカーソルは見えなくなるようにする*/
 
   text-align: center;
+  overflow-x: hidden;
 }
 
 body::-webkit-scrollbar {
