@@ -309,7 +309,7 @@ filter: blur(0.005em) saturate(0.7) contrast(1) brightness(1); */
 
     .hero__box-txt {
         width: 100%;
-        padding: 0;
+        padding: 20% 0;
         text-align: center;
         gap: 0;
     }
