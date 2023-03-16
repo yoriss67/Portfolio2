@@ -296,6 +296,9 @@ filter: blur(0.005em) saturate(0.7) contrast(1) brightness(1); */
 }
 
 @media all and (max-width: 768px) {
+  .hero__box-greeting {
+    line-height: 2rem;
+  }
   .hero__box  {
     flex-direction: column;
     top: 6%;
@@ -314,26 +317,28 @@ filter: blur(0.005em) saturate(0.7) contrast(1) brightness(1); */
     .hero__box-titles {
         display: flex;
         flex-direction: column;
-        transform: translateY(7vh);
+        /* transform: translateY(7vh); */
         width: 100%;
+        line-height: 2rem;
+        margin-top: 4vh;
     }
 
     .hero__box-title {
       margin: 0vh auto;
       padding:  0;
       width: 100%;
-      font-size: min(1.7rem, 24px);
+      font-size: 1.2rem;
       }
 
     .hero__box-title1 {
-      transform: translate(0%, -25%);
+      /* transform: translate(0%, -78%); */
     }
 
     .hero__box-title2 {
-      transform: translate(0%, -20%);
+      /* transform: translate(0%, -50%); */
     }
 
     .hero__box-title3 {
-      transform: translate(0%, -22%);
+      /* transform: translate(0%, -40%); */
     }
   }
