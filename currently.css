@@ -34,7 +34,7 @@
 }
 
 .scrimba.bounce {
-  animation: bounce 2s ease;
+  /* animation: bounce 2s ease; */
 }
 
 @keyframes bounce {

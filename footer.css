@@ -6,9 +6,12 @@ footer {
     background-color: #AABDB5;
     background-color: #b8e2d2;
     background-color: #8FC4D1;
+    background-color: #86beb891;
 
 
-    padding: 4vh 0;
+    padding: 5vh 0;
+    margin: 15vh auto 0;
+
     
 }
 
@@ -89,7 +92,7 @@ input, textarea {
     padding: 2vw;
     border-radius: 5px;
     color: #212529;
-    border: #212529 2px solid;
+    border: #212529 1px solid;
 }
 
 input:focus, textarea:focus {

@@ -83,6 +83,10 @@
 
 
   @media all and (max-width:990px) {
+    .navbar {
+        padding: 1% ;
+      }
+
     .nav-item i {
         font-size: 1.5rem;
       }
