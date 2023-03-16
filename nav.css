@@ -5,11 +5,11 @@
     padding: 1% 4%;
 }
 
-.navbar h2 {
+.navbar h1 {
     color: #CB7A67;
 }
 
-.navbar h2 {
+.navbar h1 {
     font-size: min(5vw, 2rem);
 }
 
@@ -58,7 +58,7 @@
 
 
 /* js */
-.navbar-brand h2.change-color {
+.navbar-brand h1.change-color {
     color: rgb(79, 135, 157);
     color: #004182;
     color: rgb(90, 152, 122);

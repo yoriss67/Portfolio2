@@ -744,6 +744,9 @@ img {
 }
 
 @media all and (max-width: 768px) {
+  .section-wrapper h2 {
+    margin: 10vh auto;
+  } 
 
   .dn-in-pc {
     display: inline-block;

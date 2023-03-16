@@ -120,17 +120,24 @@
     .white-color-sand {
         width: 100%;
         left: 0%;
+        top: 100%;
     }
     
     .thick-color-sand {
         width: 100%;
-        top: 106%;
+        top: 103%;
       }
 
 
 
     .skills__flex-container {
         flex-wrap: wrap;
+        padding: 5vh 0;
+        line-height: 2.5rem;
+    }
+
+    .skills__flex-item {
+        width: 35%;
     }
     
 }
