@@ -296,13 +296,10 @@ filter: blur(0.005em) saturate(0.7) contrast(1) brightness(1); */
 }
 
 @media all and (max-width: 768px) {
-<<<<<<< HEAD
 
   .hero {
     margin:  10% auto;
   }
-=======
->>>>>>> 00ffcab34b7853429800b7d7c97db5d7994ddac6
   .hero__box-greeting {
     line-height: 2rem;
   }
