@@ -2,14 +2,14 @@
 .navbar {
     background-color: transparent;
     margin-bottom: 10vh;
-    padding: 2% 5%;
+    padding: 1% 4%;
 }
 
-.navbar h2 {
-    color: #fff;
+.navbar h1 {
+    color: #CB7A67;
 }
 
-.navbar h2 {
+.navbar h1 {
     font-size: min(5vw, 2rem);
 }
 
@@ -27,7 +27,7 @@
 
 
 .nav-link  {
-    color: white;
+    color: #CB7A67;
     z-index: 9999;
     position: relative;
 
@@ -40,6 +40,8 @@
     color: #004182;
     color: rgba(118, 186, 153, 1);
     color: var(--green);
+    color: #5E9A99;
+
 
 
 }
@@ -56,11 +58,13 @@
 
 
 /* js */
-.navbar-brand h2.change-color {
+.navbar-brand h1.change-color {
     color: rgb(79, 135, 157);
     color: #004182;
     color: rgb(90, 152, 122);
     color: var(--green);
+    color: #5E9A99;
+
   }
 
 
@@ -79,6 +83,10 @@
 
 
   @media all and (max-width:990px) {
+    .navbar {
+        padding: 1% ;
+      }
+
     .nav-item i {
         font-size: 1.5rem;
       }

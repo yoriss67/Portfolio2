@@ -34,7 +34,7 @@
 }
 
 .scrimba.bounce {
-  animation: bounce 2s ease;
+  /* animation: bounce 2s ease; */
 }
 
 @keyframes bounce {
@@ -61,6 +61,7 @@
 }
 
 .scrimba-top-text p {
+  text-align: center;
 }
 
 .scrimba-card-wrapper {
@@ -92,6 +93,9 @@
   object-fit: cover;
   object-position: center top;
   transition: 0.3s;
+
+  border: 1px solid #000;
+  border-radius: 10px
 }
 
 .scrimba-card-img:hover {

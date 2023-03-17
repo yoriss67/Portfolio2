@@ -40,6 +40,7 @@
   background-size: cover;
   border: 1px solid #000;
   border-radius: 10px;
+  background-color: #86beb891;
 }
 
 .works__flex__image img {
@@ -91,7 +92,7 @@
 } */
 
 .language-meter-info p:not(:last-of-type) {
-  padding-right: 2rem;
+  padding-right: 1.2rem;
 }
 
 
@@ -110,7 +111,7 @@
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  margin-right: 0.5rem;
+  margin-right: 4px;
 }
 
 .html-circle {
@@ -119,6 +120,7 @@
 
 .css-circle {
   background-color:  var(--green);
+
 }
 
 .js-circle {
