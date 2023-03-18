@@ -93,6 +93,8 @@ input, textarea {
     border-radius: 5px;
     color: #212529;
     border: #212529 1px solid;
+
+    max-width: 60vw;
 }
 
 input:focus, textarea:focus {
