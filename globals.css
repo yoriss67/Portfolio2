@@ -753,6 +753,9 @@ img {
 }
 
 @media all and (max-width: 768px) {
+  .section-wrapper {
+    margin: 10vh auto;
+  }
   .section-wrapper h2 {
     margin: 10vh auto;
   } 

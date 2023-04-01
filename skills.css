@@ -243,12 +243,16 @@
 
     .skills__flex-container {
         flex-wrap: wrap;
-        padding: 5vh 0;
+        padding: 0 0 5vh;
         line-height: 2.5rem;
+        justify-content: space-around;
     }
 
     .skills__flex-item {
-        width: 35%;
+      width: 40%;
+      height: auto;
+      padding: 3%;
+      margin: 5%;
     }
     
 }

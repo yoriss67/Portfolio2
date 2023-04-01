@@ -235,8 +235,6 @@ filter: blur(0.005em) saturate(0.7) contrast(1) brightness(1); */
 
 /* I'm Iori */
 .hero__box-greeting h2 {
-  color: coral;
-  color: #c6897b;
   text-shadow: 2px 2px 1px #a57351;
   text-shadow: 2px 2px 1px #fff;
 
@@ -248,7 +246,9 @@ filter: blur(0.005em) saturate(0.7) contrast(1) brightness(1); */
 
   /* text-shadow: 3px 2px 2.5px rgba(128, 107, 55, 0.86), 6px 5px 4px rgba(177, 147, 73, 0.86); */
   /* color: #f69647; */
-  color: #cb7a67;
+  /* color: #cb7a67; */
+
+
 }
 
 .hero__box-titles {
@@ -269,10 +269,12 @@ filter: blur(0.005em) saturate(0.7) contrast(1) brightness(1); */
     font-size: min(3vw, 40px);
 }*/
 
-  font-size: min(3vw, 2.5rem);
+  font-size: min(3vw, 3rem);
   font-family: 'Crimson Pro', serif;
   font-weight: 700;
   text-shadow: 2px 2px 1px #fff;
+    color: #cb7a67;
+
 
 
   position: relative;
@@ -310,9 +312,10 @@ filter: blur(0.005em) saturate(0.7) contrast(1) brightness(1); */
   .hero__box {
     flex-direction: column;
     top: 6%;
+    padding: 10% 0;
   }
   .hero__box-img {
-    width: 50%;
+    width: 80%;
   }
 
   .hero__box-txt {
@@ -327,7 +330,7 @@ filter: blur(0.005em) saturate(0.7) contrast(1) brightness(1); */
     flex-direction: column;
     /* transform: translateY(7vh); */
     width: 100%;
-    line-height: 2rem;
+    line-height: 3rem;
     margin-top: 4vh;
   }
 
@@ -335,7 +338,7 @@ filter: blur(0.005em) saturate(0.7) contrast(1) brightness(1); */
     margin: 0vh auto;
     padding: 0;
     width: 100%;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
   }
 
   .hero__box-title1 {

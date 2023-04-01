@@ -357,7 +357,7 @@ for(let i=0; i< skillsFlexItems.length; i++) {
 const heroBoxTitles = this.document.querySelectorAll('.hero__box-title')
 
 for(let i=0; i< heroBoxTitles.length; i++) {
-  if (scroll > 1) {
+  if (scroll > 0) {
     heroBoxTitles[i].classList.add('fadeUp')
     heroBoxTitles[i].style.animationDelay = i * 0.3 + 's'
   } else {
