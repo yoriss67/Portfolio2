@@ -135,6 +135,8 @@ font-family: 'Crimson Pro', serif;
 font-family: 'Crimson Text', serif;
 font-family: 'Hina Mincho', serif;
 font-family: 'Noto Serif JP', serif;
+
+うねうね
 font-family: 'Shrikhand', cursive; 
 */
 
@@ -161,7 +163,11 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: 'Shrikhand', cursive; 
+  font-family: 'Crimson Pro', serif;
+/* font-family: 'Crimson Text', serif;
+font-family: 'Hina Mincho', serif; */
+/* font-family: 'Noto Serif JP', serif; */
+
   font-weight: 800;
 
 }
@@ -207,6 +213,9 @@ body {
 
   background-color: #FFFFE1;
   background-color: #fff0e1;
+
+  background-color: rgba(217, 217, 217, 0.46);
+
 }
 
 body::-webkit-scrollbar {

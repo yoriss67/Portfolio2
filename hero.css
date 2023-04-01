@@ -2,13 +2,16 @@
 .hero {
   position: relative;
   margin: 0;
-  width: 80%;
+  width: 100%;
   height: 100vh;
   display: flex;
   align-items: center;
 
-  margin: 5% auto;
+  margin: 0 auto;
   /* border-radius: 20px; */
+
+  background: linear-gradient(179.27deg, rgba(102, 167, 124, 0.31) 18.32%, rgba(41, 41, 41, 0.0248) 87.12%), rgba(217, 217, 217, 0.46);
+
 }
 
 .hero__bg-container {
@@ -182,12 +185,11 @@ background: linear-gradient(180deg, rgba(39,77,86,1) 0%, rgba(195,208,203,1) 100
     height: 80%; */
 
   position: absolute;
-  width: 80%;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  left: 10%;
-  padding-bottom: 10%;
+  padding: 10%;
 }
 
 .hero__box-img {
@@ -197,8 +199,11 @@ background: linear-gradient(180deg, rgba(39,77,86,1) 0%, rgba(195,208,203,1) 100
     transform: translate(-20%, -20%);
   }*/
 
-  width: 25%;
+  width: 100%;
   border-radius: 10px;
+  background-image: url(./images/bali-pano.png);
+  background-size: cover;
+  background-repeat: no-repeat;
 
   /* background-image: 
     radial-gradient(ellipse, #0000, #0007),
@@ -211,18 +216,13 @@ filter: blur(0.005em) saturate(0.7) contrast(1) brightness(1); */
 }
 
 .hero__box-txt {
-  /* display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    margin: 0 auto; */
-
   height: 100%;
   display: flex;
   flex-direction: column;
-  text-align: left;
+  align-items: center;
   gap: 10vh;
-  width: 60%;
-  padding-left: 15%;
+  width: 100%;
+  padding:5% 10%;
 }
 
 .hero__box-greeting {
@@ -252,9 +252,10 @@ filter: blur(0.005em) saturate(0.7) contrast(1) brightness(1); */
 }
 
 .hero__box-titles {
-  /* display: flex; */
+  display: flex;
   line-height: 3rem;
-  width: 35vw;
+  align-items: center;
+  gap: 5vw;
 }
 /* 共通 */
 
@@ -270,9 +271,13 @@ filter: blur(0.005em) saturate(0.7) contrast(1) brightness(1); */
 
   font-size: min(3vw, 2.5rem);
   font-family: 'Crimson Pro', serif;
-  font-family: 'Shrikhand', cursive; 
   font-weight: 700;
   text-shadow: 2px 2px 1px #fff;
+
+
+  position: relative;
+  opacity: 0;
+  transition: all .4s;
 }
 
 .hero__box-title1 {
@@ -296,14 +301,13 @@ filter: blur(0.005em) saturate(0.7) contrast(1) brightness(1); */
 }
 
 @media all and (max-width: 768px) {
-
-  .hero {
-    margin:  10% auto;
-  }
+  /* .hero {
+    margin: 10% auto;
+  } */
   .hero__box-greeting {
     line-height: 2rem;
   }
-  .hero__box  {
+  .hero__box {
     flex-direction: column;
     top: 6%;
   }
@@ -311,38 +315,38 @@ filter: blur(0.005em) saturate(0.7) contrast(1) brightness(1); */
     width: 50%;
   }
 
-    .hero__box-txt {
-        width: 100%;
-        padding: 20% 0;
-        text-align: center;
-        gap: 0;
-    }
-
-    .hero__box-titles {
-        display: flex;
-        flex-direction: column;
-        /* transform: translateY(7vh); */
-        width: 100%;
-        line-height: 2rem;
-        margin-top: 4vh;
-    }
-
-    .hero__box-title {
-      margin: 0vh auto;
-      padding:  0;
-      width: 100%;
-      font-size: 1.2rem;
-      }
-
-    .hero__box-title1 {
-      /* transform: translate(0%, -78%); */
-    }
-
-    .hero__box-title2 {
-      /* transform: translate(0%, -50%); */
-    }
-
-    .hero__box-title3 {
-      /* transform: translate(0%, -40%); */
-    }
+  .hero__box-txt {
+    width: 100%;
+    padding: 20% 0;
+    text-align: center;
+    gap: 0;
   }
+
+  .hero__box-titles {
+    display: flex;
+    flex-direction: column;
+    /* transform: translateY(7vh); */
+    width: 100%;
+    line-height: 2rem;
+    margin-top: 4vh;
+  }
+
+  .hero__box-title {
+    margin: 0vh auto;
+    padding: 0;
+    width: 100%;
+    font-size: 1.2rem;
+  }
+
+  .hero__box-title1 {
+    /* transform: translate(0%, -78%); */
+  }
+
+  .hero__box-title2 {
+    /* transform: translate(0%, -50%); */
+  }
+
+  .hero__box-title3 {
+    /* transform: translate(0%, -40%); */
+  }
+}
