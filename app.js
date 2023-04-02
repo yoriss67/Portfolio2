@@ -347,9 +347,10 @@ for(let i=0; i< skillsFlexItems.length; i++) {
   if (scroll > 500) {
     skillsFlexItems[i].classList.add('fadeUp')
     skillsFlexItems[i].style.animationDelay = i * 0.3 + 's'
-  } else {
-    skillsFlexItems[i].classList.remove('fadeUp')
-  }
+  } 
+  // else {
+  //   skillsFlexItems[i].classList.remove('fadeUp')
+  // }
 }
 
 
@@ -360,9 +361,10 @@ for(let i=0; i< heroBoxTitles.length; i++) {
   if (scroll > 0) {
     heroBoxTitles[i].classList.add('fadeUp')
     heroBoxTitles[i].style.animationDelay = i * 0.3 + 's'
-  } else {
-    heroBoxTitles[i].classList.remove('fadeUp')
-  }
+  } 
+  // else {
+  //   heroBoxTitles[i].classList.remove('fadeUp')
+  // }
 }
   
 });
