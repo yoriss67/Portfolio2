@@ -1,17 +1,12 @@
-.currently {
-}
-
-
+.currently {}
 
 .currently h2 {
   margin: 15vh auto 5vh;
 }
 
-.learning {
-}
+.learning {}
 
-.scrimba-wrapper {
-}
+.scrimba-wrapper {}
 
 .scrimba-top-text {
   display: flex;
@@ -43,11 +38,9 @@
   100% {
     transform: translateY(0);
   }
-
   40% {
     transform: translateY(-30px) scale(1.1);
   }
-
   60% {
     transform: translateY(-15px) scale(1.2);
   }
@@ -68,7 +61,6 @@
   width: 100%;
   flex-wrap: wrap;
   gap: 2vw;
-
   margin: 15vh auto;
 }
 
@@ -76,7 +68,6 @@
   display: flex;
   flex-direction: column;
   width: 25%;
-
   overflow: hidden;
 }
 
@@ -91,7 +82,6 @@
   object-fit: cover;
   object-position: center top;
   transition: 0.3s;
-
   border: 1px solid #000;
   border-radius: 10px
 }
@@ -100,8 +90,7 @@
   /* transform: scale(1.2); */
 }
 
-.scrimba-card-desc {
-}
+.scrimba-card-desc {}
 
 .scrimba-card-desc-title {
   display: flex;
@@ -146,28 +135,22 @@
   .scrimba-card-wrapper {
     flex-direction: column;
   }
-
   .scrimba-card {
     width: 80%;
     margin: 0 auto;
   }
-
   .scrimba-card-desc-title {
     justify-content: center;
   }
-
   .scrimba-card-desc-text {
     text-align: center;
   }
-
   .currently .eye-container {
     margin-right: 1rem;
   }
-
   .retribe16-image {
     width: 100%;
   }
-
   .retribe16-text {
     width: 100%;
   }

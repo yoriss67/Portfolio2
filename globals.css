@@ -91,7 +91,10 @@ video {
   font: inherit;
   vertical-align: baseline;
 }
+
+
 /* HTML5 display-role reset for older browsers */
+
 article,
 aside,
 details,
@@ -105,17 +108,21 @@ nav,
 section {
   display: block;
 }
+
 body {
   line-height: 1;
 }
+
 ol,
 ul {
   list-style: none;
 }
+
 blockquote,
 q {
   quotes: none;
 }
+
 blockquote:before,
 blockquote:after,
 q:before,
@@ -123,12 +130,15 @@ q:after {
   content: '';
   content: none;
 }
+
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
+
 /* ------------------------------------------------------- */
+
 
 /* 
 font-family: 'Crimson Pro', serif;
@@ -154,8 +164,7 @@ font-family: 'Shrikhand', cursive;
   --thickpurple: #9480f8;
   --lightpurple: #e4d0fa;
   --sky-blue: #b6d4f1;
-  --green:#5E9A99;
-
+  --green: #5E9A99;
 }
 
 h1,
@@ -165,7 +174,6 @@ h4,
 h5 {
   font-family: 'Crimson Pro', serif;
   font-weight: 800;
-
 }
 
 h2 {
@@ -180,7 +188,6 @@ p {
   font-family: 'Mada', sans-serif;
   font-family: 'Hina Mincho', serif;
   letter-spacing: 2px;
-
 }
 
 p,
@@ -197,14 +204,13 @@ a {
 body {
   font-family: 'Mada', sans-serif;
   height: 500vh;
-  cursor: none; /*もともとあるカーソルは見えなくなるようにする*/
-
+  cursor: none;
+  /*もともとあるカーソルは見えなくなるようにする*/
   text-align: center;
   overflow-x: hidden;
   background-color: #FFFFE1;
   background-color: #fff0e1;
   background-color: rgba(217, 217, 217, 0.46);
-
 }
 
 body::-webkit-scrollbar {
@@ -213,11 +219,9 @@ body::-webkit-scrollbar {
 
 body::-webkit-scrollbar-track {
   background: #fff;
-
 }
 
 body::-webkit-scrollbar-thumb {
-
   background-color: rgba(118, 186, 153, 1);
   background-color: var(--green);
 }
@@ -231,8 +235,6 @@ img {
   width: 80%;
   height: auto;
 }
-
-
 
 #cursor {
   position: fixed;
@@ -253,8 +255,8 @@ img {
   height: 20px;
   border-radius: 30px;
   margin: -5px 0 0 -5px;
-  z-index: 9998; 
-  pointer-events: none; 
+  z-index: 9998;
+  pointer-events: none;
   opacity: 0.5;
 }
 
@@ -276,9 +278,7 @@ img {
   writing-mode: vertical-rl;
   text-orientation: upright;
   z-index: 9999;
-
   color: #CB7A67;
-
   border: none;
   background-color: transparent;
   cursor: none;
@@ -289,8 +289,6 @@ img {
 #translate.change-color {
   color: var(--green);
   color: #5E9A99;
-
-
 }
 
 #translate p {
@@ -306,7 +304,6 @@ img {
     -ms-writing-mode: lr-bt;
     writing-mode: horizontal-tb;
   }
-
   #translate p {
     -ms-writing-mode: lr-bt;
     writing-mode: horizontal-tb;
@@ -358,13 +355,15 @@ img {
   width: 100%;
   height: 100vh;
   background-color: #cc3333;
-
   /* 環境によって「z-index」追加 */
   position: fixed;
   top: 0;
   left: 0;
 }
+
+
 /* 読み込み完了後に「loaded」を付与する */
+
 #loader.loaded {
   animation: fadeOut 3s forwards;
 }
@@ -382,6 +381,7 @@ img {
 
 
 /* https://1-notes.com/javascript-rotate-animation-with-animate/*/
+
 .rotate {
   width: 50vw;
   height: auto;
@@ -392,7 +392,9 @@ img {
   width: 50%;
 }
 
+
 /* https://into-the-program.com/javascript-loader/ */
+
 
 /* https://1-notes.com/css-border-animation/ */
 
@@ -405,19 +407,22 @@ img {
   background-color: rgba(188, 219, 217, 0.99);
   background-color: var(--sky-blue);
   background-color: #5E9A99;
-
   z-index: 999;
-
   /* 環境によって「z-index」追加 */
   position: fixed;
   top: 0;
   left: 0;
 }
+
+
 /* 読み込み完了後に「loaded」を付与する */
+
 #loading.loaded {
   animation: fadeOut 3s forwards;
   /* display: none; */
 }
+
+
 /* 以降「SpinKit」で選んだアニメーションのCSSを貼付する */
 
 .loading-relative {
@@ -439,10 +444,8 @@ img {
   height: 10vw;
   border-radius: 50%;
   border: 2px solid #000;
-
   top: 48.5%;
   left: 44%;
-
   animation: dusk-to-dawn 5s linear infinite;
   overflow: hidden;
 }
@@ -452,7 +455,6 @@ img {
   100% {
     transform: translateY(3vh);
   }
-
   50% {
     transform: translateY(5vh);
   }
@@ -464,10 +466,8 @@ img {
   border-top: 2px solid #000;
   background-color: var(--sky-blue);
   background-color: #5E9A99;
-
   top: 65%;
   left: 40%;
-
   z-index: 999;
 }
 
@@ -477,10 +477,8 @@ img {
   border: solid 1px #000;
   background-color: #000;
   transform: translateX(-100%);
-
   top: 60%;
   left: 42%;
-
   animation: border_anim_horizon_left 5s linear infinite;
 }
 
@@ -489,7 +487,6 @@ img {
   100% {
     width: 0%;
   }
-
   50% {
     width: 3%;
   }
@@ -500,10 +497,8 @@ img {
   height: 1px;
   border: solid 1px #000;
   background-color: #000;
-
   top: 52%;
   left: 43%;
-
   transform: translateX(-100%) rotate(30deg);
   animation: border_anim_diagonal_left 5s linear infinite;
 }
@@ -513,7 +508,6 @@ img {
   100% {
     width: 0%;
   }
-
   50% {
     width: 3%;
     transform: translate(-3vw, -2vw) rotate(vw);
@@ -526,12 +520,9 @@ img {
   border: solid 1px #000;
   background-color: #000;
   transform: rotate(90deg);
-
   top: 49%;
   left: 49%;
-
   transform: rotate(90deg);
-
   animation: border_anim_vertical 5s linear infinite;
 }
 
@@ -541,10 +532,8 @@ img {
     width: 0%;
     transform: translate(0vw, -2vh) rotate(90deg);
   }
-
   50% {
     width: 3%;
-
     transform: translate(-1.5vw, -2vh) rotate(90deg);
   }
 }
@@ -554,10 +543,8 @@ img {
   height: 1px;
   border: solid 1px #000;
   background-color: #000;
-
   top: 52%;
   right: 45%;
-
   transform: translateX(100%) rotate(-210deg);
   animation: border_anim_diagonal_right 5s linear infinite;
 }
@@ -567,7 +554,6 @@ img {
   100% {
     width: 0%;
   }
-
   50% {
     width: 3%;
     transform: translate(3vw, 2vw) rotate(vw);
@@ -579,9 +565,7 @@ img {
   height: 1px;
   border: solid 1px #000;
   background-color: #000;
-
   transform: translateX(100%);
-
   top: 60%;
   right: 44%;
   animation: border_anim_horizon_right 5s linear infinite;
@@ -592,12 +576,11 @@ img {
   100% {
     width: 0%;
   }
-
   50% {
     width: 3%;
-
   }
 }
+
 
 /* 🤔max320, 375,  425pxで太陽の位置下げる */
 
@@ -605,17 +588,14 @@ img {
   .sun-circle {
     top: 55%;
   }
-
   .sun-border1,
   .sun-border5 {
     top: 63%;
   }
-
   .sun-border2,
   .sun-border4 {
     top: 59%;
   }
-
   .sun-border3 {
     top: 59%;
   }
@@ -631,17 +611,14 @@ img {
   .sun-circle {
     top: 57%;
   }
-
   .sun-border2,
   .sun-border4 {
     top: 60.5%;
   }
-
   .sun-border3 {
     top: 61%;
   }
 }
-
 
 .dn-in-pc {
   display: none;
@@ -658,16 +635,13 @@ img {
   }
   .section-wrapper h2 {
     margin: 10vh auto;
-  } 
-
+  }
   .dn-in-pc {
     display: inline-block;
   }
-
   .dn-in-sp {
     display: none;
   }
-
   #translate {
     right: 1.3rem;
   }

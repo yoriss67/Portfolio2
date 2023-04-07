@@ -10,18 +10,13 @@
 
 .navbar img {
   width: clamp(16px, 2vw, 5vw);
-  /* width: 2vw; */
 }
 
-.navbar > .container-fluid {
+.navbar>.container-fluid {
   align-items: flex-start;
 }
 
-/* .nav-link i {
-    色変える
-    z-index: 999;
-    color: white;
-} */
+
 
 .nav-link {
   color: #cb7a67;
@@ -29,7 +24,9 @@
   position: relative;
 }
 
+
 /* js */
+
 .nav-link i.change-color {
   color: rgb(79, 135, 157);
   color: #004182;
@@ -38,16 +35,10 @@
   color: #5e9a99;
 }
 
-/* の枠線を消す
-.navbar-toggler {
-	border: 0 !important;
-}
 
-.navbar-toggler:focus {
-    box-shadow: none !important;
-} */
 
 /* js */
+
 .navbar-brand img.change-color {
   color: rgb(79, 135, 157);
   color: #004182;
@@ -56,9 +47,6 @@
   color: #5e9a99;
 }
 
-#navbarText {
-  /* font-size: 3rem; */
-}
 
 .nav-item {
   margin: 0 0 0 2%;
@@ -72,7 +60,6 @@
   .navbar {
     padding: 1%;
   }
-
   .nav-item i {
     font-size: 1.5rem;
   }
