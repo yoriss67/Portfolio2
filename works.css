@@ -899,6 +899,10 @@
 
 .shrink {}
 
+/* .reference {
+  font-size: min(5.5vw, 20px);
+} */
+
 
 /* 
 .shrink.shrink-animation {

@@ -66,6 +66,11 @@
 
 
   // https://flex-box.net/js-scrollin/
+
+
+
+
+  
   // こっちの方がversatile
   let fadeInTarget = document.querySelectorAll('.fadein');
   window.addEventListener('scroll', () => {
@@ -83,6 +88,9 @@
       }
     }
   });
+
+
+
 
   // ReTribe16 shrink
 
@@ -303,3 +311,23 @@ for(let i=0; i< heroBoxTitles.length; i++) {
 
 
 // }
+
+
+
+// rough
+
+// import { annotate  } from 'rough-notation';
+// import { annotate } from './node_modules/rough-notation/lib/rough-notation.esm.js';
+
+// Or using unpkg
+// import { annotate } from 'https://unpkg.com/rough-notation?module';
+
+// // const e = document.querySelector('#myElement');
+// // const annotation = annotate(e, { type: 'underline' });
+// // annotation.show();
+
+
+// // 🌸
+// const e = document.querySelector('#myElement');
+// const annotation = rough.annotate(e, { type: 'underline' });
+// annotation.show();

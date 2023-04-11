@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        height: 1000vh;
+       
+      }
+
+      .box {
+        height: 4000px;
+      }
+
+      .rough-notation {
+        width: 80vw;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+
+    <div class="rough-notation rough">
+      <h1>Annotation Group Demo</h1>
+      <p class="bracket rough">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed accumsan
+        nisi hendrerit augue molestie tempus.
+        <em class="rough">Phasellus</em> purus quam, aliquet nec commodo quis,
+        pharetra ut orci. Donec laoreet ligula nisl, placerat molestie mauris
+        luctus id.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed accumsan
+        nisi hendrerit augue molestie tempus.
+        <strong class="rough">Phasellus</strong> purus quam, aliquet nec commodo
+        quis, pharetra ut orci. Donec laoreet ligula nisl, placerat molestie
+        mauris luctus id.
+      </p>
+    </div>
+
+    <script type="module">
+      import {
+        annotate,
+        annotationGroup,
+      } from 'https://unpkg.com/rough-notation?module';
+
+      const n1 = document.querySelector('em');
+      const n2 = document.querySelector('strong');
+      const n3 = document.querySelector('h1');
+      const n4 = document.querySelector('.bracket');
+
+      const a1 = annotate(n1, {
+        type: 'underline',
+        color: 'blue',
+        animationDuration: 3000,
+      });
+
+    
+      const a2 = annotate(n2, {
+        type: 'circle',
+        color: 'red',
+        padding: 10,
+      });
+
+      
+      const a3 = annotate(n3, {
+        type: 'box',
+        color: 'orange',
+      });
+
+      
+      // const a4 = annotate(n4, { type: 'bracket', color: 'rgba(118, 186, 153, 1)', brackets: ['left', 'right'] , strokeWidth: 2, padding: 10 });
+      const a4 = annotate(n4, {
+        type: 'bracket',
+        color: 'red',
+        brackets: ['left', 'right'],
+        strokeWidth: 5,
+        animationDuration: 5000,
+      });
+
+
+      const ag = annotationGroup([a1, a2, a3, a4]);
+    //   ag.show();
+
+
+    function checkInView() {
+      
+    const elements = [n1, n2, n3, n4];
+    for (let i = 0; i < elements.length; i++) {
+      const element = elements[i];
+      const rect = element.getBoundingClientRect();
+      if (rect.top < window.innerHeight && rect.bottom >= 0) {
+        ag.show();
+        window.removeEventListener('scroll', checkInView);
+        break;
+      }
+    }
+  }
+
+  
+  window.addEventListener('scroll', checkInView);
+
+
+    </script>
+  </body>
+</html>

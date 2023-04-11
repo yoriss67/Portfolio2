@@ -165,6 +165,8 @@ font-family: 'Shrikhand', cursive;
   --lightpurple: #e4d0fa;
   --sky-blue: #b6d4f1;
   --green: #5E9A99;
+  --basesunset: rgb(218, 216, 71);
+
 }
 
 h1,
@@ -644,5 +646,28 @@ img {
   }
   #translate {
     right: 1.3rem;
+  }
+}
+
+
+
+
+
+
+/* rough */
+.rough-notation {
+  width: 80vw;
+  margin: 0 auto;
+}
+
+.animate-underline path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash 1s linear forwards;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
   }
 }

@@ -9,43 +9,11 @@
   background: linear-gradient(179.27deg, rgba(102, 167, 124, 0.31) 18.32%, rgba(41, 41, 41, 0.0248) 87.12%), rgba(217, 217, 217, 0.46);
 }
 
-.hero__bg-container {}
 
-.hero__bg1 {
-  width: 100%;
-  height: 40%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  object-fit: cover;
-  background: rgb(94, 154, 153);
-  background: linear-gradient(180deg, rgba(94, 154, 153, 1) 5%, #fff0e1 75%);
-  border-radius: 20px 20px 0 0;
-  bottom: 0;
-}
 
-.wave-bubble-container {
-  position: relative;
-  height: 20vh;
-  width: 100%;
-  transform: translateY(-14%);
-}
 
-.wave-bubble {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  transform: scale(1.3) translateY(-7%);
-}
 
-.wave-bubble2 {
-  position: absolute;
-  top: 7%;
-  left: 0;
-  width: 100%;
-  transform: rotate(180deg);
-}
+
 
 #particles-js {
   width: 100%;
@@ -54,75 +22,10 @@
   z-index: 9;
 }
 
-.hero__bg2 {
-  width: 100%;
-  height: 38%;
-  position: absolute;
-  top: 38%;
-  left: 0;
-  z-index: 9;
-  object-fit: cover;
-  z-index: -1;
-  background: rgba(33, 138, 164, 0.5);
-  bottom: 0;
-  border-radius: 0 0px 20px 20px;
-  background-color: #86beb8;
-}
 
-.blue-wave-curve {
-  position: absolute;
-  width: 100%;
-  bottom: 10%;
-}
-
-.abstract {
-  position: absolute;
-  width: 15%;
-  animation: bottom-to-top infinite 5s ease-in-out;
-  transform: translateY(-5vh) rotate(190deg);
-  visibility: hidden;
-}
-
-@keyframes bottom-to-top {
-  0% {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(-5vh);
-  }
-  10% {
-    visibility: visible;
-    opacity: 0.8;
-  }
-  20% {
-    opacity: 0.6;
-  }
-  50% {}
-  60% {
-    opacity: 0.3;
-  }
-  70% {
-    opacity: 0.01;
-    visibility: hidden;
-  }
-  90% {}
-  100% {
-    transform: translateY(5vh);
-  }
-}
-
-.abstract1 {
-  top: 40%;
-  left: 80%;
-}
-
-.abstract2 {
-  top: 40%;
-  left: 2%;
-  animation-delay: 1s;
-}
 
 .hero__box {
-  position: absolute;
+  /* position: absolute; */
   width: 100%;
   display: flex;
   justify-content: center;
@@ -130,13 +33,6 @@
   padding: 10%;
 }
 
-.hero__box-img {
-  width: 100%;
-  border-radius: 10px;
-  background-image: url(./images/bali-pano.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-}
 
 .hero__box-txt {
   height: 100%;
@@ -145,8 +41,34 @@
   align-items: center;
   gap: 10vh;
   width: 100%;
-  padding: 5% 10%;
+  padding: 5%;
 }
+
+.hero__box-txt p {
+  line-height: 2rem;
+    text-align: left;
+}
+
+
+.sp-br {
+  display: none;
+}
+
+
+
+.hero__box-img {
+  width: 90%;
+  border-radius: 10px;
+  background-image: url(./images/bali-up_cleanup.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 2% 0 10%;
+  margin: 0 5%;
+  min-height: 55vh;
+  background-position: center 90%;
+}
+
+
 
 .hero__box-greeting {
   line-height: 3rem;
@@ -159,8 +81,24 @@
 
 /* I'm Iori */
 .hero__box-greeting h2 {
-  text-shadow: 2px 2px 1px #a57351;
+  color: #cb7a67;
   text-shadow: 2px 2px 1px #fff;
+  font-size: min(10vw, 50px);
+
+  /* fadeinコピー */
+  transform: translate(0, 50px);
+  animation: hero-fadein 2s forwards;
+}
+
+@keyframes hero-fadein {
+  0% {
+    opacity: 0;
+    transform: translate(0, 200px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
 }
 
 .hero__box-titles {
@@ -185,30 +123,49 @@
 }
 
 @media all and (max-width: 768px) {
-  /* .hero {
-    margin: 10% auto;
-  } */
-  .hero__box-greeting {
-    line-height: 2rem;
+
+  .hero {
+    /* padding: 15vh 0; */
+    height: auto;
   }
+
   .hero__box {
     flex-direction: column;
     top: 6%;
     padding: 10% 0;
+    width: 80%;
+    margin: 0 auto;
+}
+  .hero__box-greeting {
+    line-height: 2rem;
   }
   .hero__box-img {
     width: 80%;
+    min-height: 30vh;
+    padding: 10% 0 ;
   }
+
+  
   .hero__box-txt {
     width: 100%;
     padding: 20% 0;
     text-align: center;
     gap: 0;
   }
-  .hero__box-titles {
+
+  .hero__box-txt p {
+    line-height: 1.5rem;
+    text-align: left;
+  }
+
+  .sp-br {
+    display: inline-block;
+  }
+  
+
+  /* .hero__box-titles {
     display: flex;
     flex-direction: column;
-    /* transform: translateY(7vh); */
     width: 100%;
     line-height: 3rem;
     margin-top: 4vh;
@@ -218,14 +175,6 @@
     padding: 0;
     width: 100%;
     font-size: 1.5rem;
-  }
-  .hero__box-title1 {
-    /* transform: translate(0%, -78%); */
-  }
-  .hero__box-title2 {
-    /* transform: translate(0%, -50%); */
-  }
-  .hero__box-title3 {
-    /* transform: translate(0%, -40%); */
-  }
+  } */
+
 }
