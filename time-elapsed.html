@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .toggleBox-jp {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="translate">日本語 / English</button>
+    <p>PHP: <span class="time-elapsed-php"></span></p>
+    <p>HTML: <span class="time-elapsed-html"></span></p>
+
+    <div class="toggleBox-en">
+      <label for="name">Name:</label>
+      <input type="text" id="name" />
+      <br />
+      <label for="email">Email:</label>
+      <input type="text" id="email" />
+    </div>
+
+    <div class="toggleBox-jp">
+      <label id="nameLabel" class="name">氏名:</label>
+      <input type="text" id="name" />
+      <br />
+      <label id="emailLabel" class="email">メール:</label>
+      <input type="text" id="email" />
+    </div>
+
+    <script>
+      function calculateTimeElapsed(startDate, className) {
+        const today = new Date();
+        const diffTime = Math.abs(today - startDate);
+        const diffMonths = Math.floor(diffTime / (1000 * 60 * 60 * 24 * 30.44));
+        const timeElapsed = document.querySelectorAll(className);
+        timeElapsed.forEach(
+          (time) =>
+            (time.innerHTML =
+              diffMonths.toFixed(1) +
+              (toggleBoxesJp[0].classList.contains('display-none')
+                ? ' months'
+                : 'ヶ月')),
+        );
+      }
+
+      // PHP
+      const phpStartDate = new Date('2022-10-10');
+      const phpClassName = document.querySelector('.time-elapsed-php');
+      calculateTimeElapsed(phpStartDate, phpClassName);
+
+      // HTML
+      const htmlStartDate = new Date('2022-07-10');
+      const htmlClassName = document.querySelector('.time-elapsed-html');
+      calculateTimeElapsed(htmlStartDate, htmlClassName);
+
+      const toggleBoxesEn = document.querySelectorAll('.toggleBox-en');
+      const toggleBoxesJp = document.querySelectorAll('.toggleBox-jp');
+      toggleBoxesJp.forEach((toggleBox) =>
+        toggleBox.classList.add('display-none'),
+      );
+
+      // document.querySelector('#translate').addEventListener('click', function () {
+      //   toggleBoxesEn.forEach(toggleBox => toggleBox.classList.toggle('display-none'));
+      //   toggleBoxesJp.forEach(toggle
+
+      document
+        .querySelector('#translate')
+        .addEventListener('click', function () {
+          toggleBoxesEn.forEach((toggleBox) =>
+            toggleBox.classList.toggle('display-none'),
+          );
+          toggleBoxesJp.forEach((toggleBox) =>
+            toggleBox.classList.toggle('display-none'),
+          );
+
+          calculateTimeElapsed(startDate1, className1);
+          calculateTimeElapsed(startDate2, className2);
+
+          const nameLabel = document.getElementById('nameLabel');
+          const nameClasses = nameLabel.classList;
+
+          const emailLabel = document.getElementById('emailLabel');
+          const emailClasses = emailLabel.classList;
+
+          const nameResult = nameClasses.toggle('name');
+          nameLabel.textContent = nameResult ? '氏名' : 'name';
+
+          const emailResult = emailClasses.toggle('email');
+          emailLabel.textContent = emailResult ? 'メール' : 'email';
+        });
+    </script>
+  </body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    .toggleBox-jp {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <button id="translate">日本語 / English</button>
+  <p>PHP: <span class="time-elapsed-php"></span></p>
+  <p>HTML: <span class="time-elapsed-html"></span></p>
+
+  <div class="toggleBox-en">
+    <label for="name">Name:</label>
+    <input type="text" id="name">
+    <br>
+    <label for="email">Email:</label>
+    <input type="text" id="email">
+  </div>
+
+  <div class="toggleBox-jp">
+    <label id="nameLabel" class="name">氏名:</label>
+    <input type="text" id="name">
+    <br>
+    <label id="emailLabel" class="email">メール:</label>
+    <input type="text" id="email">
+  </div>
+
+  <script>
+    function calculateTimeElapsed(startDate, className) {
+      const today = new Date();
+      const diffTime = Math.abs(today - startDate);
+      const diffMonths = Math.floor(diffTime / (1000 * 60 * 60 * 24 * 30.44));
+      const timeElapsed = document.querySelectorAll(className);
+      timeElapsed.forEach((time) => time.innerHTML = diffMonths.toFixed(1) + (toggleBoxesJp[0].classList.contains('display-none') ? ' months' : 'ヶ月'));
+    }
+
+    // PHP
+    const phpStartDate = new Date('2022-10-10');
+    const phpClassName = document.querySelector( '.time-elapsed-php')
+    calculateTimeElapsed(phpStartDate, phpClassName);
+
+    // HTML
+    const htmlStartDate = new Date('2022-07-10');
+    const htmlClassName = document.querySelector('.time-elapsed-html');
+    calculateTimeElapsed(htmlStartDate, htmlClassName);
+
+    const toggleBoxesEn = document.querySelectorAll('.toggleBox-en');
+    const toggleBoxesJp = document.querySelectorAll('.toggleBox-jp');
+    toggleBoxesJp.forEach((toggleBox) => toggleBox.classList.add('display-none'));
+
+    // document.querySelector('#translate').addEventListener('click', function () {
+    //   toggleBoxesEn.forEach(toggleBox => toggleBox.classList.toggle('display-none'));
+    //   toggleBoxesJp.forEach(toggle
+
+
+
+    document.querySelector('#translate').addEventListener('click', function () {
+
+toggleBoxesEn.forEach(toggleBox => toggleBox.classList.toggle('display-none'));
+toggleBoxesJp.forEach(toggleBox => toggleBox.classList.toggle('display-none'));
+
+calculateTimeElapsed(startDate1, className1);
+calculateTimeElapsed(startDate2, className2);
+
+const nameLabel = document.getElementById('nameLabel');
+const nameClasses = nameLabel.classList;
+
+const emailLabel = document.getElementById('emailLabel');
+const emailClasses = emailLabel.classList;
+
+const nameResult = nameClasses.toggle('name');
+nameLabel.textContent = nameResult ? '氏名' : 'name';
+
+const emailResult = emailClasses.toggle('email');
+emailLabel.textContent = emailResult ? 'メール' : 'email';
+});
+
+
+
+
+
+
+
+
+
+
+//       const toggleBoxesEn = document.querySelectorAll('.toggleBox-en');
+// const toggleBoxesJp = document.querySelectorAll('.toggleBox-jp');
+
+// toggleBoxesJp.forEach((toggleBox) => toggleBox.classList.add('display-none'));
+
+// function calculateTimeElapsed(startDate, className) {
+//   const today = new Date();
+//   const diffTime = Math.abs(today - startDate);
+//   const diffMonths = Math.floor(diffTime / (1000 * 60 * 60 * 24 * 30.44));
+//   const timeElapsed = document.querySelectorAll(className);
+//   timeElapsed.forEach((time) => time.innerHTML = diffMonths.toFixed(1) + (toggleBoxesJp[0].classList.contains('display-none') ? ' months' : 'ヶ月'));
+// }
+
+// const startDate1 = new Date('2022-03-01');
+// const className1 = '.time-elapsed-1';
+
+// const startDate2 = new Date('2022-04-01');
+// const className2 = '.time-elapsed-2';
+
+// document.querySelector('#translate').addEventListener('click', function () {
+
+//   toggleBoxesEn.forEach(toggleBox => toggleBox.classList.toggle('display-none'));
+//   toggleBoxesJp.forEach(toggleBox => toggleBox.classList.toggle('display-none'));
+
+//   calculateTimeElapsed(startDate1, className1);
+//   calculateTimeElapsed(startDate2, className2);
+
+//   const nameLabel = document.getElementById('nameLabel');
+//   const nameClasses = nameLabel.classList;
+
+//   const emailLabel = document.getElementById('emailLabel');
+//   const emailClasses = emailLabel.classList;
+
+//   const nameResult = nameClasses.toggle('name');
+//   nameLabel.textContent = nameResult ? '氏名' : 'name';
+
+//   const emailResult = emailClasses.toggle('email');
+//   emailLabel.textContent = emailResult ? 'メール' : 'email';
+// });
+
+ -->
